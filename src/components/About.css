@@ -1,0 +1,35 @@
+.about-container {
+  /* border-top: 1px solid black; */
+  /* background-color: #ECECE2; */
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.about-section {
+  box-sizing: border-box;
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  gap: 24px;
+  font-size: 2rem;
+  line-height: 3rem;
+  padding-left: 24px;
+}
+
+.about {
+  width: 45vw;
+  padding-right: 24px;
+}
+
+.portrait-container {
+  margin: 24px;
+  overflow: hidden;
+}
+
+.portrait {
+  position: sticky;
+  bottom: 24px;
+  left: 24px;
+  height: 300px;
+}

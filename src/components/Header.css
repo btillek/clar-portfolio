@@ -1,0 +1,45 @@
+.header-container {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  /* justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+  padding: 24px;
+}
+
+.header {
+  font-size: 18vw;
+  font-weight: 300;
+  line-height: 17vw;
+  display: flex;
+  overflow: hidden;
+}
+
+.sub-header-crop {
+  overflow: hidden;
+  display: flex;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  /* justify-content: center; */
+}
+
+.sub-header {
+  font-size: 2vw;
+  margin-top: 24px;
+  display: flex;
+}
+
+.img-container {
+  object-fit: cover;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+}
+
+img {
+  max-width: 300px;
+  /* height: 100%; */
+}
