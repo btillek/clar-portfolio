@@ -1,0 +1,57 @@
+/* .personal1 {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: #eef2f3;
+}
+
+.img-container {
+  width: 50vw;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-img:hover {
+  cursor: w-resize;
+}
+
+.project-text {
+  background-color: #D4BA8D;
+  color: black;
+  width: 50vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+}
+
+.project-text:hover {
+  cursor: e-resize;
+}
+
+.project-title {
+  font-family: "Noto Serif Display", serif;
+  font-weight: 500;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.project-paragraph {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+p {
+  margin: 8px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+} */

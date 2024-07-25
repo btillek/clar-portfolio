@@ -1,0 +1,30 @@
+.work-body {
+  font-size: 1rem;
+  display: flex;
+}
+
+.work-imgs {
+  width: 50vw;
+  height: 70vh;
+  overflow: scroll
+}
+
+.work-img-container {
+  /* height: 500px; */
+}
+
+.project-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.work-text {
+  margin: 48px;
+  max-width: 40vw;
+  max-height: 60vh;
+}
+
+p {
+  margin: 0;
+}

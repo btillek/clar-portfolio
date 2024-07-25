@@ -1,13 +1,12 @@
-.menu-overlay {
-  background-color: rgb(121, 163, 163);
-  color: rgb(238, 235, 235);
+/* .menu-overlay {
+  background-color: #a9bae0;
+  color: rgb(250, 250, 250);
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
   width: 100vw;
   display: flex;
-  /* justify-content: space-around; */
   align-items: flex-start;
   flex-direction: column;
   z-index: 20;
@@ -26,7 +25,6 @@ li {
   font-size: 4rem;
   line-height: 4rem;
   font-weight: 400;
-  /* margin: 24px; */
 }
 
 .close-btn {
@@ -40,5 +38,6 @@ li {
 
 .close-btn:hover {
   opacity: 0.6;
+  transform: rotate(90deg);
   transition: 0.5s ease;
-}
+} */

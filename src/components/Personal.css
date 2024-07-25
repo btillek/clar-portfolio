@@ -1,0 +1,32 @@
+.personal-menu {
+  box-sizing: border-box;
+  background-color: #D8CDC3;
+  min-height: 100vh;
+  font-family: "Noto Serif Display", serif;
+  font-size: 4rem;
+  /* padding: 48px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-name {
+  color: black;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.project-titles {
+  margin: 24px;
+  text-transform: uppercase;
+}
+
+.project-name-fade {
+  opacity: 0.3;
+  transition: 0.5s ease;
+}
+
+.back-arrow {
+  font-size: 2rem;
+  cursor: pointer;
+}

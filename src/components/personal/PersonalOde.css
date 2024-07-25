@@ -1,0 +1,44 @@
+.personal-body {
+  font-size: 1rem;
+}
+
+.project-img-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  height: 500px;
+}
+
+/* .project-img-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 50vw;
+} */
+
+.project-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(162, 162, 162);
+  height: 100%;
+  width: 100%
+}
+
+.project-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-paragraph {
+  margin: 48px;
+  max-width: 40vw;
+  max-height: 60vh;
+  overflow: scroll;
+}
+
+p {
+  margin: 0;
+}

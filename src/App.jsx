@@ -1,19 +1,19 @@
 import './App.css';
 import Lenis from 'lenis';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 import Navbar from './components/Navbar';
-import Header from './components/Header'
-import About  from './components/About'
-import MenuOverlay from './components/MenuOverlay'
-import Resume from './components/Resume'
-import Footer from './components/Footer'
+import ContactOverlay from './components/ContactOverlay'
+import Home from './pages/Home';
+import Work from './pages/Work'
+import Personal from './pages/Personal';
+import Resume from './pages/Resume';
 
 function App() {
 
-  const [ showMenu, setShowMenu ] = useState(false)
-  const [ showResume, setShowResume] = useState(false)
+  const [ showContact, setShowContact ] = useState(false)
 
   const lenis = new Lenis()
 
@@ -24,20 +24,40 @@ function App() {
 
   requestAnimationFrame(raf)
 
+  const location = useLocation();
+
   return (
-    <div className="App">
-      {/* <motion.div className="opener"
-      initial={{y: 0}}
-      animate={{y: window.innerHeight, transition: {duration: 1, delay: 0.5, ease: [.2,0,0,.99]}}}
-      ></motion.div> */}
-      <Navbar setShowMenu={setShowMenu} />
-      <Header />
-      <About />
-      <MenuOverlay showMenu={showMenu} setShowMenu={setShowMenu} setShowResume={setShowResume}/>
-      {/* <Resume showMenu={showResume} setShowMenu={setShowResume}/> */}
-      <Footer />
-    </div>
-  );
+    <>
+      <Navbar setShowContact={setShowContact}/>
+      <ContactOverlay showContact={showContact} setShowContact={setShowContact}/>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/personal" element={<Personal />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+      </AnimatePresence>
+    </>
+  )
+  // return (
+  //   <div className="App">
+  //     <Navbar setShowContact={setShowContact} />
+  //     <Header />
+  //     <About />
+  //     <Marquee autoFill style={{borderTop: "0.5px solid black", paddingTop: 24, paddingBottom: 24, backgroundColor: "#C2D5FF"}}>
+  //       <a href="mailto:clartillekens@gmail.com"
+  //       style={{marginRight: 480, textDecoration: "none", color: "black"}}
+  //       >Let's work together</a>
+  //     </Marquee>
+
+  //     <ContactOverlay showContact={showContact} setShowContact={setShowContact}/>
+  //     {/* <Personal1 /> */}
+  //     {/* <MenuOverlay showMenu={showMenu} setShowMenu={setShowMenu} setShowResume={setShowResume}/> */}
+  //     {/* <Resume /> */}
+  //     <Footer />
+  //   </div>
+  // );
 }
 
 export default App;

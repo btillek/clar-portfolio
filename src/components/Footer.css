@@ -1,8 +1,22 @@
+.footer-container {
+  position: relative;
+  height: 20vh;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+}
+
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+}
+
 .footer {
   background-color: rgb(29, 28, 29);
-  color: #ECECE2;
+  color: #92928c;
   height: 20vh;
+  width: 100vw;
+  box-sizing: border-box;
   display: flex;
+  justify-content: space-between;
   align-items: flex-end;
   padding: 24px;
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&display=swap');
+
 .header-container {
   box-sizing: border-box;
   width: 100vw;
@@ -7,15 +9,31 @@
   align-items: center;
   flex-direction: column; */
   padding: 24px;
+  font-family: "Noto Serif Display", serif;
 }
 
 .header {
   font-size: 18vw;
   font-weight: 300;
   line-height: 17vw;
+  /* max-height: 25vh; */
   display: flex;
   overflow: hidden;
 }
+
+/* .header-letter {
+  transition: 0.5s
+}
+
+.header-letter:hover {
+  font-weight: 700;
+  transition: 0.5s
+}
+
+.header-letter:hover + .header-letter {
+  font-weight: 500;
+  transition: 0.5s;
+} */
 
 .sub-header-crop {
   overflow: hidden;
@@ -30,16 +48,4 @@
   font-size: 2vw;
   margin-top: 24px;
   display: flex;
-}
-
-.img-container {
-  object-fit: cover;
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-}
-
-img {
-  max-width: 300px;
-  /* height: 100%; */
 }

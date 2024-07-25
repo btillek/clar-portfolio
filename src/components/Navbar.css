@@ -10,6 +10,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  mix-blend-mode: darken;
   z-index: 10;
 }
 
@@ -20,8 +21,9 @@
 }
 
 .menu {
+  font-size: 1rem;
   display: flex;
-  gap: 50px;
+  gap: 24px;
   margin: 0;
 }
 
@@ -33,4 +35,9 @@ li {
   /* font-family: "UnifrakturCook", cursive; */
   font-family: "Almendra Display", serif;
   font-size: 2rem;
+}
+
+a {
+  color: rgb(26, 26, 26);
+  text-decoration: none;
 }

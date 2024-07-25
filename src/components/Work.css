@@ -1,0 +1,27 @@
+.work-menu {
+  box-sizing: border-box;
+  color: #FD302F;
+  background-color: #F6EEE3;
+  min-height: 100vh;
+  font-family: "Noto Serif Display", serif;
+  font-size: 4rem;
+  /* padding: 48px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.work-project-name {
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.work-project-titles {
+  margin: 24px;
+  text-transform: uppercase;
+}
+
+.work-project-name-fade {
+  opacity: 0.3;
+  transition: 0.5s ease;
+}
