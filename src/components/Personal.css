@@ -1,6 +1,6 @@
 .personal-menu {
   box-sizing: border-box;
-  background-color: #D8CDC3;
+  /* background-color: #D8CDC3; */
   min-height: 100vh;
   font-family: "Noto Serif Display", serif;
   font-size: 4rem;
@@ -14,6 +14,7 @@
   color: black;
   cursor: pointer;
   transition: 0.5s ease;
+  /* border-top: 0.5px solid black; */
 }
 
 .project-titles {
@@ -24,6 +25,7 @@
 .project-name-fade {
   opacity: 0.3;
   transition: 0.5s ease;
+  /* border-top: 0.5px solid black; */
 }
 
 .back-arrow {

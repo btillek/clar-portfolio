@@ -1,5 +1,8 @@
 .personal-body {
   font-size: 1rem;
+  width: 100vw;
+  display: flex;
+  align-items: space-between;
 }
 
 .project-img-container {
@@ -7,6 +10,7 @@
   bottom: 24px;
   right: 24px;
   height: 500px;
+  width: 350px;
 }
 
 /* .project-img-container {
@@ -39,6 +43,6 @@
   overflow: scroll;
 }
 
-p {
+/* p {
   margin: 0;
-}
+} */

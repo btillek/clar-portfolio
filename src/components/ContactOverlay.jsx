@@ -13,7 +13,6 @@ export default function ContactOverlay({showContact, setShowContact}) {
           animate={{y: 0, transition: {duration: 1.5, ease: [0.5, 0, 0, 1]}}}
           exit={{y: -window.innerHeight, transition: {duration: 1.5, ease: [0.5, 0, 0, 1]}}}
           >
-              <div className="contact-list">
 
                 <div className="contact-portrait-container">
                   <motion.img src={Portrait} alt="" className="contact-portrait"
@@ -21,40 +20,61 @@ export default function ContactOverlay({showContact, setShowContact}) {
                   animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1.5, delay: 1, ease: [0.5, 0, 0, 1]}}}/>
                 </div>
 
+              <div className="contact-list">
+
                 <div className="contact-crop">
                   <motion.div className="contact-link"
-                  style={{fontSize: "1rem", marginBottom: "24px"}}
-                  initial={{y: 90}}
+                  initial={{y: 190}}
                   animate={{y: 0, transition: {duration: 1, delay: 1, ease: [.2,0,0,.99]}}}
                   >
-                    Get in touch:
+                    clartillekens@gmail.com
+                  </motion.div>
+                  <motion.div className="contact-link"
+                  initial={{y: 190}}
+                  animate={{y: 0, transition: {duration: 1, delay: 1, ease: [.2,0,0,.99]}}}
+                  >
+                    phone number?
                   </motion.div>
                 </div>
 
                 <div className="contact-crop">
-                  <motion.div className="contact-link" href="mailto:clartillekens@gmail.com"
-                  initial={{y: 90}}
+                  <motion.div className="contact-link"
+                  initial={{y: 190}}
                   animate={{y: 0, transition: {duration: 1, delay: 1.2, ease: [.2,0,0,.99]}}}
                   >
-                    Email
+                    Instagram
                   </motion.div>
-                </div>
-
-                <div className="contact-crop">
-                  <motion.div className="contact-link" href="mailto:clartillekens@gmail.com"
+                  <motion.div className="contact-link"
                   initial={{y: 90}}
-                  animate={{y: 0, transition: {duration: 1, delay: 1.4 , ease: [.2,0,0,.99]}}}
+                  animate={{y: 0, transition: {duration: 1, delay: 1.2, ease: [.2,0,0,.99]}}}
                   >
                     Linkedin
                   </motion.div>
                 </div>
 
                 <div className="contact-crop">
-                  <motion.div className="contact-link" href="mailto:clartillekens@gmail.com"
-                  initial={{y: 90}}
-                  animate={{y: 0, transition: {duration: 1, delay: 1.6 , ease: [.2,0,0,.99]}}}
+                  <motion.div className="contact-link"
+                  initial={{y: 190}}
+                  animate={{y: 0, transition: {duration: 1, delay: 1.2, ease: [.2,0,0,.99]}}}
+                  style={{fontStyle: "italic"}}
                   >
-                    Instagram
+                    Location:
+                  </motion.div>
+                  <motion.div className="contact-link"
+                  initial={{y: 190}}
+                  animate={{y: 0, transition: {duration: 1, delay: 1.2, ease: [.2,0,0,.99]}}}
+                  >
+                    Berlin, Germany
+                  </motion.div>
+                </div>
+
+                <div className="contact-crop">
+                  <motion.div className="contact-link"
+                  initial={{y: 190}}
+                  animate={{y: 0, transition: {duration: 1, delay: 1.2, ease: [.2,0,0,.99]}}}
+
+                  >
+                    © Clár Tillekens
                   </motion.div>
                 </div>
 

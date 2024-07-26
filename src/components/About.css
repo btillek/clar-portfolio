@@ -25,7 +25,7 @@
 .about-content {
   display: flex;
   justify-content: flex-start;
-  gap: 200px;
+  gap: 260px;
   /* overflow: scroll; */
   /* width: 300vw; */
 }

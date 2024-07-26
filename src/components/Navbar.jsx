@@ -13,15 +13,17 @@ export default function Navbar({setShowContact}) {
     >
 
       <div className="menu">
-        <motion.div className="contact-btn" whileHover="hover"
-        >
-          <Link to="/">Home</Link>
-          <motion.div style={{width: 0, backgroundColor: "black", height: 2}}
-          variants={{hover: {width: "100%"}}}
-          transition={{duration: 0.5, ease: [1, 0, 0, 1]}}
-          />
-        </motion.div>
-        ※
+        {
+          location.pathname !=="/" &&
+          <motion.div className="contact-btn" whileHover="hover">
+            <Link to="/">Home</Link>
+            <motion.div style={{width: 0, backgroundColor: "black", height: 2}}
+            variants={{hover: {width: "100%"}}}
+            transition={{duration: 0.5, ease: [1, 0, 0, 1]}}
+            />
+          </motion.div>
+        }
+
         <motion.div className="contact-btn" whileHover="hover"
         >
           <Link to="/work">Work</Link>
@@ -30,16 +32,7 @@ export default function Navbar({setShowContact}) {
           transition={{duration: 0.5, ease: [1, 0, 0, 1]}}
           />
         </motion.div>
-        ※
-        <motion.div className="contact-btn" whileHover="hover"
-        >
-          <Link to="resume">Resume</Link>
-          <motion.div style={{width: 0, backgroundColor: "black", height: 2}}
-          variants={{hover: {width: "100%"}}}
-          transition={{duration: 0.5, ease: [1, 0, 0, 1]}}
-          />
-        </motion.div>
-        ※
+
         <motion.div className="contact-btn" whileHover="hover"
         >
           <Link to="/personal">Personal</Link>
@@ -48,7 +41,16 @@ export default function Navbar({setShowContact}) {
           transition={{duration: 0.5, ease: [1, 0, 0, 1]}}
           />
         </motion.div>
-        ※
+
+        <motion.div className="contact-btn" whileHover="hover"
+        >
+          <Link to="resume">Resume</Link>
+          <motion.div style={{width: 0, backgroundColor: "black", height: 2}}
+          variants={{hover: {width: "100%"}}}
+          transition={{duration: 0.5, ease: [1, 0, 0, 1]}}
+          />
+        </motion.div>
+
         <motion.div className="contact-btn" whileHover="hover"
         onClick={() => setShowContact(true)}
         >

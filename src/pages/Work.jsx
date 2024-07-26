@@ -1,11 +1,13 @@
 import '../components/Work.css'
 import { AnimatePresence, motion } from "framer-motion"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import DiceExtras from '../components/work/DiceExtras'
 
 export default function Work() {
 
-  document.documentElement.scrollTop = 0;
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+  }, [])
 
   const projects = [
     "DICE Extras",
@@ -30,10 +32,15 @@ export default function Work() {
 
   return (
     <>
+      <motion.div className="transition-swipe"
+      initial={{y: window.innerHeight}}
+      animate={{y: -window.innerHeight, transition: {duration: 2, delay: 0, ease: [.2,0,0,1]}}}
+      exit={{y: window.innerHeight, transition: {duration: 2, delay: 1, ease: [.2,0,0,1]}}}
+      />
       <motion.div className="work-menu"
       initial={{y: window.innerWidth}}
       animate={{y: 0, transition: {duration: 1, delay: 0, ease: [.2,0,0,1]}}}
-      exit={{y: window.innerWidth, transition: {duration: 1, delay: 1, ease: [.5,0,0,.5]}}}
+      exit={{y: "100%", transition: {duration: 1, delay: 0.5, ease: [.5,0,0,.5]}}}
       >
         <div className="work-project-content">
           <AnimatePresence>
