@@ -13,7 +13,7 @@ export default function About() {
     target: sideScrollRef,
     offset: ["0.3 end", "end end"]
   })
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-71%"])
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-56%"])
 
   const animationValues = {
     hidden: {
@@ -61,7 +61,7 @@ export default function About() {
                   return (
                     <span style={{display: "inline-block", overflow: "hidden", lineHeight: "3.6rem"}}>
                       <motion.span
-                      style={{display: "inline-block"}}
+                      style={{display: "inline"}}
                       variants={animationValues}
                       >{word}&nbsp;</motion.span>
                     </span>
@@ -74,7 +74,7 @@ export default function About() {
                   return (
                     <span style={{display: "inline-block", overflow: "hidden", lineHeight: "3.6rem"}}>
                       <motion.span
-                      style={{display: "inline-block"}}
+                      style={{display: "inline"}}
                       variants={animationValues}
                       >{word}&nbsp;</motion.span>
                     </span>
@@ -93,28 +93,10 @@ export default function About() {
               <motion.p className="about-title" variants={animationValues}>
                 A work summary
               </motion.p>
-
-              <div className="about-paragraph">
-                {"I’ve been working in tech since 2016. Music and live events are my focus lately. Before that, it was health. I started out at a legendary menstrual cycle tracking app. Then I went on to freelancing for startups focused on autoimmunity and menopause.".split(" ").map((word) => {
-                  return (
-                    <span style={{display: "inline-block", overflow: "hidden", lineHeight: "3.6rem"}}>
-                      <motion.span
-                      style={{display: "inline-block"}}
-                      variants={animationValues}
-                      >{word}&nbsp;</motion.span>
-                    </span>
-                  )
-                })}
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div className="about-section"
-          initial="hidden"
-          animate="visible"
-          transition={{staggerChildren: 0.01}}
-          >
-            <div>
+              <motion.p className="about-paragraph" variants={animationValues}>
+                I’ve been working in tech since 2016. Music and live events are my focus lately. Before that, it was health. I started out at a legendary menstrual cycle tracking app. Then I went on to freelancing for startups focused on autoimmunity and menopause.
+              </motion.p>
+              <br />
               <motion.p className="about-paragraph" variants={animationValues}>
                 My writing also extends to print, film, and television. Currently, I’m a part of Granta Magazine’s inaugural Writing Memoir Workshop.
               </motion.p>
@@ -124,6 +106,8 @@ export default function About() {
               </motion.p>
             </div>
           </motion.div>
+
+
         </motion.div>
       </motion.div>
     </div>
