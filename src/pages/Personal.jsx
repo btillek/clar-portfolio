@@ -20,6 +20,7 @@ export default function Personal() {
   const [ showProject, setShowProject ] = useState(null)
   const [ highlightProject, setHighlightProject ] = useState(null)
 
+
   const handleClick = (project) => {
     if (showProject !== project) {
       setShowProject(project)
@@ -27,6 +28,20 @@ export default function Personal() {
       setShowProject(null)
     }
   }
+
+  // return (
+  //   <>
+  //     <div>
+  //       {/* <AnimatePresence>
+  //         { showProject === "Diet ode to my ancestors" && <PersonalOde setShowProject={setShowProject}/> }
+  //       </AnimatePresence> */}
+  //       <AnimatePresence>
+  //         { showProject === "Bog" && <PersonalBog setShowProject={setShowProject}/> }
+  //       </AnimatePresence>
+  //         {/* <PersonalChocolate /> */}
+  //     </div>
+  //   </>
+  // )
 
   return (
     <>

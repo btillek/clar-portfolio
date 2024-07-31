@@ -5,17 +5,18 @@
   top: 0;
   left: 0;
   background-color: rgb(147, 147, 147);
-  z-index: 20;
+  z-index: 1;
 }
 
 .work-menu {
   box-sizing: border-box;
   /* color: #FD302F; */
   color: rgb(30, 30, 30);
-  /* background-color: #F6EEE3; */
+  background-color: #a6bac9;
   min-height: 100vh;
   font-family: "Noto Serif Display", serif;
-  font-size: 4rem;
+  /* font-size: 4rem; */
+  font-size: 3.5vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,7 +26,6 @@
 .work-project-name {
   cursor: pointer;
   transition: 0.5s ease;
-  /* border-top: 0.5px solid #FD302F */
 }
 
 .work-project-titles {
@@ -33,12 +33,18 @@
   text-transform: uppercase;
   position: fixed;
   bottom: 0;
-  /* background-color: #F6EEE3; */
-  width: 95vw;
+  width: 50vw;
 }
 
 .work-project-name-fade {
   opacity: 0.3;
   transition: 0.5s ease;
   /* border-top: 0.5px solid #FD302F */
+}
+
+.thumbnail-container {
+  position: fixed;
+  z-index: 20;
+  bottom: 24px;
+  right: 24px;
 }

@@ -1,0 +1,93 @@
+.personal-project-body {
+  min-height: 100vh;
+  width: 100vw;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  display: flex;
+}
+
+.personal-project-text {
+  box-sizing: border-box;
+  width: 50vw;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  color: #000000;
+  padding: 48px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+
+.personal-project-title {
+  font-family: "Noto Serif Display", serif;
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+  text-transform: uppercase;
+  display:flex;
+  align-items: center;
+  height: 100vh;
+  padding-left: 48px;
+  position: sticky;
+  top: 0;
+}
+
+.personal-project-line {
+  display: block;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.personal-project-link {
+  opacity: 0.5;
+  transition: 0.5s ease;
+  position: fixed;
+  transform: rotate(-90deg);
+  right: -48px;
+  top: calc(50vh);
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  /* width: 100vh; */
+}
+
+/* .personal-project-link {
+  opacity: 0.7;
+  color: #000000;
+  transition: 0.5s ease;
+  position: fixed;
+  right: 48px;
+  bottom: 48px;
+  font-weight: 300;
+} */
+
+.personal-project-link:hover {
+  opacity: 0.9;
+  cursor: alias;
+  transition: 0.5s ease;
+}
+
+.personal-project-img-container {
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+}
+
+.personal-project-img {
+  object-fit: cover;
+  width: 25vw;
+  margin: 0;
+}
+
+.personal-project-left {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+}

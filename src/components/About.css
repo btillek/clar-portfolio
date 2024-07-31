@@ -9,6 +9,8 @@
   position: sticky;
   top: 25vh;
   height: 60vh;
+  font-family: "Work Sans", sans-serif;
+
 }
 
 .about-section {
@@ -16,9 +18,9 @@
   margin-top: 24px;
   display: flex;
   align-items: flex-start;
-  font-size: 3rem;
+  font-size: 2rem;
   /* font-size: 3vw; */
-  font-weight: 300;
+  font-weight: 400;
   padding-bottom: 48px;
 }
 
