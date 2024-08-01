@@ -8,8 +8,10 @@ import Navbar from './components/Navbar';
 import ContactOverlay from './components/ContactOverlay'
 import Home from './pages/Home';
 import Work from './pages/Work'
+import Work2 from './pages/Work2'
 import Personal from './pages/Personal';
 import Resume from './pages/Resume';
+import Contact from './pages/Contact'
 
 function App() {
 
@@ -34,8 +36,10 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />
+          <Route path="/work2" element={<Work2 />} />
           <Route path="/personal" element={<Personal />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </AnimatePresence>
     </>

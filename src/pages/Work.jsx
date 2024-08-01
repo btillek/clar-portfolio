@@ -1,10 +1,12 @@
 import '../components/Work.css'
 import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useState } from "react"
+import { workProjects } from '../work-projects-data'
 import DiceExtras from '../components/work/DiceExtras'
 import DiceGroups from '../components/work/DiceGroups'
-import Thumbnail1 from '../assets/Screenshot 2024-07-29 at 11.34.54 AM.png'
-import Thumbnail2 from '../assets/Screenshot 2024-07-29 at 12.16.28 PM.png'
+import Thumbnail1 from '../assets/Screenshot 2024-07-25 at 4.29.43 PM.png'
+import Thumbnail2 from '../assets/Screenshot 2024-07-26 at 12.16.56 PM.png'
+
 
 export default function Work() {
 
@@ -12,22 +14,13 @@ export default function Work() {
     document.documentElement.scrollTop = 0;
   }, [])
 
-  const projects = [
-    "Extras",
-    "Groups",
-    "Beyond genre",
-    "Spotify & Apple Music",
-    "Content design system",
-    "Filtering",
-    "Fan feedback"
-  ]
-
   const [ showProject, setShowProject ] = useState(null)
-  const [ highlightProject, setHighlightProject ] = useState(null)
+  const [ highlightProject, setHighlightProject ] = useState("Extras")
 
   const handleClick = (project) => {
-    if (showProject !== project) {
-      setShowProject(project)
+    // setHighlightProject(null)
+    if (showProject !== project.title) {
+      setShowProject(project.title)
     } else {
       setShowProject(null)
     }
@@ -45,65 +38,78 @@ export default function Work() {
       animate={{y: 0, transition: {duration: 1, delay: 0, ease: [.2,0,0,1]}}}
       exit={{y: "100%", transition: {duration: 1, delay: 0.5, ease: [.5,0,0,.5]}}}
       >
+        <div style={{position: "fixed", top: "24px", left: "24px", fontSize: "2rem"}}>( WORK )</div>
         <div className="work-project-content">
           <AnimatePresence>
             { showProject === "Extras" && <DiceExtras /> }
             { showProject === "Groups" && <DiceGroups /> }
           </AnimatePresence>
         </div>
-        <div className="work-project-titles">
 
-          <AnimatePresence>
+        <motion.div
+        initial={{y: window.innerHeight}}
+        animate={{y: 0, transition: {duration: 1, delay: 1, ease: [0.5, 0, 0, 1]}}}
+        >
           {
-            highlightProject === "Extras" && showProject === null &&
-            <div className="thumbnail-container">
-              <motion.img src={Thumbnail1} alt="" style={{width: "30vw"}}
-              initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
-              animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-              exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-              />
-            </div>
-          }
-          </AnimatePresence>
-          <AnimatePresence>
-          {
-            highlightProject === "Groups" && showProject === null &&
-            <div className="thumbnail-container">
-              <motion.img src={Thumbnail2} alt="" style={{width: "30vw"}}
-              initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
-              animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-              exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-              />
-            </div>
-          }
-          </AnimatePresence>
-
-          {
-            projects.map((project, i) => {
+            workProjects.map((project) => {
               return (
-                <motion.div key={project} layout transition={{duration: 1, ease: [.2,0,0,1]}}>
-
+                <AnimatePresence>
                   {
-                    (showProject === project || showProject === null) &&
+                    highlightProject === project.title && showProject === null &&
+                    <div className="thumbnail-container">
+                      <motion.img src={project.img} alt="" style={{width: "30vw", height: "80vh", objectFit: "cover"}}
+                      initial={{clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"}}
+                      animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: .5, ease: [0.5, 0, 0, 1]}}}
+                      exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: .5, delay: 0.3, ease: [0.5, 0, 0, 1]}}}
+                      />
+                    </div>
+                  }
+                </AnimatePresence>
+              )
+            })
+          }
+
+        </motion.div>
+
+        <div className="work-project-titles">
+          {
+            workProjects.map((project, i) => {
+              return (
+                <motion.div key={project.title} layout transition={{duration: 1, ease: [.2,0,0,1]}}>
+                  {
+                    (showProject === project.title || showProject === null) &&
                     <div style={{overflow: "hidden"}}>
                       <motion.div
-                        style={{display: "flex"}}
-                        initial={{y: window.innerWidth}}
-                        animate={{y: 0, transition: {duration: 1, delay: i * 0.1, ease: [.8,0,0,.8]}}}
-                        exit={{y: window.innerWidth, transition: {duration: 1, delay: 0.8 - i * 0.1, ease: [1,0,0,.5]}}}
+                        className={highlightProject === project.title || highlightProject === null ? "work-project-name" : "work-project-name-fade"}
+                        style={showProject === project.title ? {border: "none"} : null}
+                        initial={{x: -window.innerWidth/2}}
+                        animate={{x: 0, transition: {duration: 1, delay: i * 0.1, ease: [.8,0,0,.8]}}}
+                        exit={{x: -window.innerWidth/2, transition: {duration: 1, delay: 0.8 - i * 0.1, ease: [1,0,0,.5]}}}
                         onClick={() => handleClick(project)}
-                        onMouseEnter={() => setHighlightProject(project)}
-                        onMouseLeave={() => setHighlightProject(null)}
-                        className={highlightProject === project || highlightProject === null ? "work-project-name" : "work-project-name-fade"}
+                        onMouseEnter={() => setHighlightProject(project.title)}
                         >
                           {
-                            showProject !== project
+                            showProject !== project.title
                             ?
-                            <div style={{display: "inline", fontSize: "1rem", marginRight: "12px"}}>0{i + 1}</div>
+                            <span style={{display: "inline", fontSize: "1rem", marginRight: "24px", marginBottom: "6px"}}>0{i + 1}</span>
                             :
-                            <div style={{display: "inline", fontSize: "1.5rem", marginRight: "6px"}}>↩</div>
+                            <div style={{display: "inline", fontSize: "1.5rem", marginRight: "20px"}}>←</div>
                           }
-                          {project}
+                          <motion.span
+                          // animate={highlightProject === project ? {x: 12} : null}
+                          >
+                            {project.title}
+                          </motion.span>
+                          <AnimatePresence>
+                          { showProject === null &&
+                            <motion.span
+                            style={{marginLeft: "auto"}}
+                            initial={{x: -250, opacity: 0}}
+                            animate={{x: 0, opacity: 1, transition: { duration: .5, delay: .5, ease: [.2,0,0,.8]}}}
+                            >
+                              →
+                            </motion.span> }
+                          </AnimatePresence>
                       </motion.div>
                     </div>
                   }
@@ -113,7 +119,6 @@ export default function Work() {
             })
           }
         </div>
-
       </motion.div>
 
 
