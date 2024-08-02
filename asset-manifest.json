@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/clar-portfolio/static/css/main.80cc1ac1.css",
-    "main.js": "/clar-portfolio/static/js/main.d46b61c3.js",
+    "main.css": "/clar-portfolio/static/css/main.04eff0f9.css",
+    "main.js": "/clar-portfolio/static/js/main.b4486c0d.js",
+    "static/media/Screenshot 2024-08-01 at 3.34.57 PM.png": "/clar-portfolio/static/media/Screenshot 2024-08-01 at 3.34.57 PM.3dc1609b7767bd2003f1.png",
     "static/media/Portrait.png": "/clar-portfolio/static/media/Portrait.f9bcb5902099b1d7ac2e.png",
     "static/media/Screenshot 2024-07-30 at 11.39.42 AM.png": "/clar-portfolio/static/media/Screenshot 2024-07-30 at 11.39.42 AM.028595d9a6bba541b524.png",
     "static/media/Screenshot 2024-07-26 at 12.16.56 PM.png": "/clar-portfolio/static/media/Screenshot 2024-07-26 at 12.16.56 PM.8e909c9801b5e92dfe6c.png",
     "static/media/Screenshot 2024-07-26 at 12.19.42 PM.png": "/clar-portfolio/static/media/Screenshot 2024-07-26 at 12.19.42 PM.a0d3444b9366cf10e563.png",
     "static/media/Screenshot 2024-07-26 at 11.19.36 AM.png": "/clar-portfolio/static/media/Screenshot 2024-07-26 at 11.19.36 AM.a1a7c9a35a571cf44c5a.png",
     "static/media/Screenshot 2024-07-30 at 3.07.14 PM.png": "/clar-portfolio/static/media/Screenshot 2024-07-30 at 3.07.14 PM.387963a0e2b6cb0069c2.png",
+    "static/media/Screenshot 2024-07-25 at 4.26.00 PM.png": "/clar-portfolio/static/media/Screenshot 2024-07-25 at 4.26.00 PM.89d617e879eb5399af4e.png",
     "static/media/Screenshot 2024-07-29 at 12.05.57 PM.png": "/clar-portfolio/static/media/Screenshot 2024-07-29 at 12.05.57 PM.dfca8b30a9f477ca221b.png",
     "static/media/Screenshot 2024-07-25 at 11.57.39 AM.png": "/clar-portfolio/static/media/Screenshot 2024-07-25 at 11.57.39 AM.bfa94b01bfc3fe1bdb54.png",
     "static/media/Screenshot 2024-07-22 at 4.20.16 PM.png": "/clar-portfolio/static/media/Screenshot 2024-07-22 at 4.20.16 PM.2c55886d04ff085bb8d3.png",
@@ -16,16 +18,20 @@
     "static/media/Screenshot 2024-07-25 at 11.59.47 AM.png": "/clar-portfolio/static/media/Screenshot 2024-07-25 at 11.59.47 AM.6ca6529cac5ba8a81a03.png",
     "static/media/Screenshot 2024-07-29 at 12.07.12 PM.png": "/clar-portfolio/static/media/Screenshot 2024-07-29 at 12.07.12 PM.8bb13cc0dbc29c59f871.png",
     "static/media/Screenshot 2024-07-30 at 10.50.14 AM.png": "/clar-portfolio/static/media/Screenshot 2024-07-30 at 10.50.14 AM.e69a27ed98c88b80dabb.png",
+    "static/media/Screenshot 2024-08-01 at 3.37.54 PM.png": "/clar-portfolio/static/media/Screenshot 2024-08-01 at 3.37.54 PM.4b8b0fdffb675d77fa67.png",
+    "static/media/Screenshot 2024-08-01 at 3.36.34 PM.png": "/clar-portfolio/static/media/Screenshot 2024-08-01 at 3.36.34 PM.f9177f79622447eb9722.png",
+    "static/media/Screenshot 2024-08-01 at 3.38.11 PM.png": "/clar-portfolio/static/media/Screenshot 2024-08-01 at 3.38.11 PM.d1292f51dfc63719523a.png",
+    "static/media/Screenshot 2024-08-01 at 3.30.32 PM.png": "/clar-portfolio/static/media/Screenshot 2024-08-01 at 3.30.32 PM.acf34ce5ff50af042411.png",
     "static/media/Screenshot 2024-07-29 at 12.08.51 PM.png": "/clar-portfolio/static/media/Screenshot 2024-07-29 at 12.08.51 PM.d62881cfeed2c6b515fc.png",
     "static/media/Screenshot 2024-07-29 at 11.34.54 AM.png": "/clar-portfolio/static/media/Screenshot 2024-07-29 at 11.34.54 AM.75d15986231bc9be3d08.png",
     "static/media/Screenshot 2024-07-25 at 4.29.43 PM.png": "/clar-portfolio/static/media/Screenshot 2024-07-25 at 4.29.43 PM.e6a8f9b41d58128404e2.png",
     "static/media/Screenshot 2024-07-29 at 12.16.28 PM.png": "/clar-portfolio/static/media/Screenshot 2024-07-29 at 12.16.28 PM.dc87a23e0247db98ef57.png",
     "index.html": "/clar-portfolio/index.html",
-    "main.80cc1ac1.css.map": "/clar-portfolio/static/css/main.80cc1ac1.css.map",
-    "main.d46b61c3.js.map": "/clar-portfolio/static/js/main.d46b61c3.js.map"
+    "main.04eff0f9.css.map": "/clar-portfolio/static/css/main.04eff0f9.css.map",
+    "main.b4486c0d.js.map": "/clar-portfolio/static/js/main.b4486c0d.js.map"
   },
   "entrypoints": [
-    "static/css/main.80cc1ac1.css",
-    "static/js/main.d46b61c3.js"
+    "static/css/main.04eff0f9.css",
+    "static/js/main.b4486c0d.js"
   ]
 }
