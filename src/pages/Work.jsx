@@ -29,7 +29,7 @@ export default function Work() {
       />
       <motion.div className="work-menu"
       initial={{y: window.innerWidth}}
-      animate={{y: 0, transition: {duration: 1, delay: 0, ease: [.2,0,0,1]}}}
+      animate={{y: 0, transition: {duration: 1, ease: [.2,0,0,1]}}}
       exit={{y: "100%", transition: {duration: 1, delay: 0.5, ease: [.5,0,0,.5]}}}
       >
         {
