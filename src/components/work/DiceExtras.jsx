@@ -36,23 +36,15 @@ export default function DiceExtras() {
 
           <ImageReveal image={ExtrasImg3} />
 
-          <motion.div className="work-text"
-          initial={{y: 250, opacity: 0}}
-          whileInView={{y: 0, opacity: 1, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-          viewport={{once: true}}
-          >
+          <TextReveal>
             <p>Since we control the illustrations for each extra, I made sure we also controlled the initial generic descriptions</p>
             <p>Then partners have their own area to give the granular breakdown</p>
             <p>On the confirmation screen I wanted to make fans felt confident and satisfied with their decision to get an extra</p>
-          </motion.div>
+          </TextReveal>
 
           <ImageReveal image={ExtrasImg4} />
 
-          <motion.div className="work-text"
-          initial={{y: 250, opacity: 0}}
-          whileInView={{y: 0, opacity: 1, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-          viewport={{once: true}}
-          >
+          <TextReveal>
             <p>DICE introduces extras, a bit generic (as we don’t know exactly what each partner will offer) but still cool and enticing</p>
             <p>This is the web view – extras are only available to buy in-app</p>
             <p>There were tons of iterations that I tested with fans. Some included:</p>
@@ -61,19 +53,15 @@ export default function DiceExtras() {
               <li><p>Keep the fun going vs. Don’t head so soon</p></li>
               <li><p>Figure out what you want to sip on vs. Sort out your booze or soda already</p></li>
             </ul>
-          </motion.div>
+          </TextReveal>
 
           <ImageReveal image={ExtrasImg5} />
 
-          <motion.div className="work-text"
-          initial={{y: 250, opacity: 0}}
-          whileInView={{y: 0, opacity: 1, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-          viewport={{once: true}}
-          >
+          <TextReveal>
             <p>We show these messages to fans who just bought tickets after some time had passed</p>
             <p>Works for a range of extras – fancy (VIP pass) or functional (Queue jump)</p>
             <p>A/B test options</p>
-          </motion.div>
+          </TextReveal>
 
       </motion.div>
     </div>

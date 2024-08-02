@@ -8,10 +8,6 @@ export default function PersonalChocolate() {
 
       <div className="personal-project-left">
 
-        <motion.h2 className="personal-project-title">
-          100% dark <br /> chocolate <br />or poison
-        </motion.h2>
-
         <motion.div className="personal-project-img-container"
         initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
         animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
@@ -23,10 +19,14 @@ export default function PersonalChocolate() {
       </div>
 
       <motion.div className="personal-project-text"
+      style={{backgroundColor: "black", color: "white"}}
       initial={{y: -window.innerHeight}}
       animate={{y: 0, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
       exit={{y: -window.innerHeight, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
       >
+        <motion.h2 className="personal-project-title">
+          100% dark <br /> chocolate <br />or poison
+        </motion.h2>
         <div className="personal-project-paragraph">
           <span className="personal-project-line">A rumor went around that I tried to poison someone once.</span>
           <span className="personal-project-line">I offered them a piece of 100% dark chocolate and they had a conniption when they ate it.</span>
@@ -37,7 +37,8 @@ export default function PersonalChocolate() {
           <span className="personal-project-line">Just annual dips and daily peat spritzes.</span>
         </div>
 
-        <a href="https://spectrapoets.org/100-dark-chocolate-or-poison-by-Clar-Tillekens" target="_blank" rel="noreferrer" className="personal-project-link">
+        <a href="https://spectrapoets.org/100-dark-chocolate-or-poison-by-Clar-Tillekens" target="_blank" rel="noreferrer" className="personal-project-link"
+        style={{color: "white"}}>
           ( Published in Spectra )
         </a>
       </motion.div>

@@ -11,21 +11,19 @@
 .work-menu {
   box-sizing: border-box;
   color: rgb(30, 30, 30);
+  background-color: #F5FE8B;
   min-height: 100vh;
-  /* font-family: "Noto Serif Display", serif; */
   font-family: "Work Sans", sans-serif;
-  font-weight: 400;
-  font-size: 3.5vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 20;
 }
 
 .work-project-titles {
   margin: 24px;
-  font-size: 2rem;
-  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 400;
+  /* text-transform: uppercase; */
   position: fixed;
   bottom: 0;
   width: 50vw;
@@ -37,7 +35,7 @@
   padding: 8px 0px;
   cursor: pointer;
   transition: 0.5s ease;
-  border-top: 0.5px solid black;
+  font-weight: 500;
 }
 
 .work-project-name-fade {
@@ -46,14 +44,13 @@
   padding: 8px 0px;
   opacity: 0.3;
   transition: 0.5s ease;
-  border-top: 0.5px solid black;
 }
 
 .thumbnail-container {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  height: 80vh;
+  height: 90vh;
 }
 
 .work-project-menu-container {

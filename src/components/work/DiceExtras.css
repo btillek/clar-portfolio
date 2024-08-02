@@ -1,5 +1,6 @@
-.work-body {
-  font-size: 1.2rem;
+/* .work-body {
+  font-size: 2rem;
+  box-sizing: border-box;
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   padding-top: 10vh;
@@ -9,16 +10,36 @@
   color: rgb(30, 30, 30);
   background-color: #eae9ec;
   padding-bottom: 192px;
+} */
+
+.work-body {
+  font-size: 2rem;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  display: flex;
+  color: rgb(30, 30, 30);
+  background-color: #eae9ec;
 }
 
-.work-card {
-  height: 100vh;
-  padding-top: 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.extras-left {
+  width: 50vw;
+  min-height: 100vh;
+}
+
+.extras-right {
+  box-sizing: border-box;
+  width: 50vw;
+  padding: 48px;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+}
+
+.extras-sticky-container {
   position: sticky;
   top: 0;
-  background-color: #eae9ec;
-  border-top: 1px solid rgb(35, 35, 35);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
