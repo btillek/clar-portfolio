@@ -66,8 +66,6 @@ export default function DiceExtras() {
 
   const [ highlightSection, setHighlightSection ] = useState(null)
 
-  console.log(highlightSection);
-
   return (
     <div className="work-wrapper">
       <motion.div className="work-body"
@@ -88,9 +86,9 @@ export default function DiceExtras() {
                         <motion.img src={section.img} alt=""
                         style={{position: "absolute", height: "80vh", width: "40vw", objectFit: "contain"}}
                         // style={{position: "fixed", top: "24px", left: "24px", height: "80vh", width: "40vw", objectFit: "cover"}}
-                        initial={{clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"}}
+                        initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
                         animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: .5, ease: [0.5, 0, 0, 1]}}}
-                        exit={{clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)", transition: {duration: .5, ease: [0.5, 0, 0, 1]}}}
+                        exit={{clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", transition: {duration: .5, ease: [0.5, 0, 0, 1]}}}
                         />
                         :
                         null

@@ -18,7 +18,7 @@
   font-family: "Work Sans", sans-serif;
   font-weight: 350;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   color: rgb(30, 30, 30);
   background-color: #f4f4f4;
   /* background-color: white; */
@@ -33,7 +33,7 @@
   box-sizing: border-box;
   width: 40vw;
   padding: 48px;
-  margin-top: 20vh;
+  margin-top: 30vh;
   margin-bottom: 40vh;
   /* text-align: justify; */
 }

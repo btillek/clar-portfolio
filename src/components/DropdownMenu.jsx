@@ -11,8 +11,7 @@ export default function DropdownMenu({setShowContact}) {
     "Home",
     "Work",
     "Personal",
-    "Resume",
-    "Contact"
+    "Resume"
   ]
 
   return (
@@ -66,19 +65,19 @@ export default function DropdownMenu({setShowContact}) {
             })
           }
 
-          {/* <motion.div className="dropdown-btn" whileHover="hover" onClick={() => setShowContact(true)}>
+          <motion.div className="dropdown-btn" whileHover="hover" onClick={() => setShowContact(true)}>
             <motion.div
-              initial={{y: 50}}
-              animate={{y: 0, transition: {duration: .5, delay: 0, ease: [.1,0,0,1]}}}
-              exit={{y: 50, transition: {duration: .5, delay: 0, ease: [1,0,0,.5]}}}
+              initial={{y: 70}}
+              animate={{y: 0, transition: {duration: .5, delay: menuItems.length * 0.1, ease: [.1,0,0,1]}}}
+              exit={{y: 70, transition: {duration: .5, delay: menuItems.length * 0.1, ease: [1,0,0,.5]}}}
               >
               <span>Contact</span>
             </motion.div>
-            <motion.div style={{width: 0, backgroundColor: "black", height: 2}}
+            <motion.div style={{width: 0, backgroundColor: "black", height: 4}}
             variants={{hover: {width: "92%"}}}
             transition={{duration: 0.3, ease: [.1, 0, 0, 1]}}
             />
-          </motion.div> */}
+          </motion.div>
 
         </motion.div>
         </>

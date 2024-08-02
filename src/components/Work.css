@@ -12,7 +12,7 @@
   box-sizing: border-box;
   color: rgb(30, 30, 30);
   /* background-color: #F5FE8B; */
-  background-color: #b1b1b1;
+  background-color: #d2d2d2;
   min-height: 100vh;
   font-family: "Work Sans", sans-serif;
   display: flex;
@@ -51,7 +51,7 @@
   position: fixed;
   bottom: 24px;
   right: 24px;
-  height: 90vh;
+  height: 66vh;
 }
 
 .work-project-menu-container {
