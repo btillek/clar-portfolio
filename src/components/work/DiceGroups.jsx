@@ -44,7 +44,7 @@ export default function DiceGroups() {
       animate={{y: 0, transition: {duration: 1, delay: 1, ease: [0.5, 0, 0, 1]}}}
       exit={{x: window.innerWidth, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
       >
-        <div className="extras-left">
+        {/* <div className="extras-left">
           <div className="extras-sticky-container">
 
               {
@@ -57,9 +57,12 @@ export default function DiceGroups() {
                         <motion.img src={section.img} alt=""
                         style={{position: "absolute", height: "80vh", width: "40vw", objectFit: "contain"}}
                         // style={{position: "fixed", top: "24px", left: "24px", height: "80vh", width: "40vw", objectFit: "cover"}}
-                        initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
-                        animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: .5, ease: [0.5, 0, 0, 1]}}}
-                        exit={{clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", transition: {duration: .5, ease: [0.5, 0, 0, 1]}}}
+                        // initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
+                        // animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: .5, ease: [0.5, 0, 0, 1]}}}
+                        // exit={{clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", transition: {duration: .5, ease: [0.5, 0, 0, 1]}}}
+                        initial={{y: -window.innerHeight}}
+                        animate={{y: 0, transition: {duration: .5, ease: [0.5, 0, 0, 1]}}}
+                        exit={{y: window.innerHeight, transition: {duration: .5, ease: [0.5, 0, 0, 1]}}}
                         />
                         :
                         null
@@ -83,8 +86,8 @@ export default function DiceGroups() {
               )
             })
           }
-        </div>
-        {/* <TextReveal>
+        </div> */}
+        <TextReveal>
           <p>Fans are more likely to go out when they’ve got friends in them mix – to help them nail down plans, we made groups</p>
         </TextReveal>
 
@@ -110,7 +113,7 @@ export default function DiceGroups() {
 
         <TextReveal>
           <p>Bonus: I took this opportunity to add a reason why there’s no unsubscribe button for transactional emails</p>
-        </TextReveal> */}
+        </TextReveal>
 
       </motion.div>
     </div>

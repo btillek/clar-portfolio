@@ -4,43 +4,25 @@
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  /* justify-content: center;
-  align-items: center;
-  flex-direction: column; */
+  /* display: flex; */
   padding: 24px;
-  font-family: "Noto Serif Display", serif;
+  /* font-family: "Noto Serif Display", serif; */
 }
 
 .header {
-  font-size: 15vw;
-  font-weight: 300;
-  line-height: 14vw;
+  font-size: 10vw;
+  font-weight: 500;
+  line-height: 9vw;
   display: flex;
   overflow: hidden;
 }
-
-/* .header-letter {
-  transition: 0.5s
-}
-
-.header-letter:hover {
-  font-weight: 700;
-  transition: 0.5s
-}
-
-.header-letter:hover + .header-letter {
-  font-weight: 500;
-  transition: 0.5s;
-} */
 
 .sub-header-crop {
   overflow: hidden;
   display: flex;
-  position: fixed;
+  /* position: fixed;
   bottom: 24px;
-  right: 24px;
-  /* justify-content: center; */
+  right: 24px; */
 }
 
 .sub-header {

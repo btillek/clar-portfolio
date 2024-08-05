@@ -6,6 +6,7 @@ import DiceExtras from '../components/work/DiceExtras'
 import DiceExtras2 from '../components/work/DiceExtras2'
 import DiceGroups from '../components/work/DiceGroups'
 import DiceBeyond from '../components/work/DiceBeyond'
+import DiceSpotify from '../components/work/DiceSpotify'
 
 export default function Work() {
 
@@ -22,11 +23,6 @@ export default function Work() {
 
   return (
     <>
-      <motion.div className="transition-swipe"
-      initial={{y: window.innerHeight}}
-      animate={{y: -window.innerHeight, transition: {duration: 2, delay: 0, ease: [.2,0,0,1]}}}
-      exit={{y: window.innerHeight, transition: {duration: 2, delay: 1, ease: [.2,0,0,1]}}}
-      />
       <motion.div className="work-menu"
       initial={{y: window.innerWidth}}
       animate={{y: 0, transition: {duration: 1, ease: [.2,0,0,1]}}}
@@ -34,43 +30,46 @@ export default function Work() {
       >
         {
           showProject === null &&
-          <div style={{position: "fixed", top: "24px", left: "24px", fontSize: "2rem", transform: "skew(-15deg)"}}>( WORK )</div>
+          <div style={{position: "fixed", bottom: "24px", left: "24px", fontSize: "1rem", transform: "skew(-15deg)"}}>Some of my favorite projects</div>
         }
 
         <div className="work-project-content">
           <AnimatePresence>
-            { showProject === "Extras" && <DiceExtras2 /> }
+            { showProject === "Extras" && <DiceExtras /> }
             { showProject === "Groups" && <DiceGroups /> }
             { showProject === "Beyond genre" && <DiceBeyond /> }
+            { showProject === "Spotify & Apple Music" && <DiceSpotify /> }
           </AnimatePresence>
         </div>
 
-        <motion.div
-        initial={{y: window.innerHeight}}
-        animate={{y: 0, transition: {duration: 1, delay: 1, ease: [0.5, 0, 0, 1]}}}
-        >
-          {
-            workProjects.map((project) => {
-              return (
-                <AnimatePresence>
-                  {
-                    highlightProject === project.title && showProject === null &&
-                    <div  className="thumbnail-container">
-                      <motion.img src={project.img} alt="" style={{width: "25vw", height: "66vh", objectFit: "cover"}}
-                      initial={{clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"}}
-                      animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: .3, ease: [0.5, 0, 0, 1]}}}
-                      exit={{clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)", transition: {duration: .3, delay: 0.3, ease: [0.5, 0, 0, 1]}}}
-                      />
-                    </div>
-                  }
-                </AnimatePresence>
-              )
-            })
-          }
-
-        </motion.div>
+        {
+          workProjects.map((project) => {
+            return (
+              <AnimatePresence>
+                {
+                  highlightProject === project.title && showProject === null &&
+                  <div  className="thumbnail-container">
+                    <motion.img src={project.img} alt="" style={{width: "25vw", height: "66vh", objectFit: "cover"}}
+                    initial={{clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"}}
+                    animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: .3, ease: [0.5, 0, 0, 1]}}}
+                    exit={{clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)", transition: {duration: .3, delay: 0.3, ease: [0.5, 0, 0, 1]}}}
+                    />
+                  </div>
+                }
+              </AnimatePresence>
+            )
+          })
+        }
 
         <div className="work-project-titles">
+          {/* <motion.div
+              style={{fontSize: "1rem", transform: "skew(-15deg)"}}
+              initial={{y: 150}}
+              animate={{y: 0, transition: {duration: 1, ease: [.8,0,0,.8]}}}
+              exit={{y: 150, transition: {duration: 1, ease: [1,0,0,.5]}}}
+              >
+                ( WORK )
+              </motion.div> */}
           {
             workProjects.map((project, i) => {
               return (
@@ -78,7 +77,7 @@ export default function Work() {
                   {
                     (showProject === project.title || showProject === null) &&
                     <div style={{overflow: "hidden"}}>
-                      <AnimatePresence>
+                      {/* <AnimatePresence>
                       {
                         // Horizontal lines between projects
                         showProject === null &&
@@ -88,10 +87,10 @@ export default function Work() {
                         exit={{width: 0, transition: {duration: 1, delay: 0, ease: [.8,0,0,.8]}}}
                         />
                       }
-                      </AnimatePresence>
+                      </AnimatePresence> */}
+
                       <motion.div
-                        className={highlightProject === project.title || highlightProject === null ? "work-project-name" : "work-project-name-fade"}
-                        style={showProject === project.title ? {border: "none"} : null}
+                        className={highlightProject === project.title ? "work-project-name" : "work-project-name-fade"}
                         initial={{y: 150}}
                         animate={{y: 0, transition: {duration: 1, delay: i * 0.1, ease: [.8,0,0,.8]}}}
                         exit={{y: 150, transition: {duration: 1, delay: 0.8 - i * 0.1, ease: [1,0,0,.5]}}}
@@ -105,8 +104,8 @@ export default function Work() {
                             :
                             <div style={{display: "inline", fontSize: "1.5rem", marginRight: "20px"}}>←</div>
                           }
-                          {project.title}
-                          <AnimatePresence>
+                            {project.title}
+                          {/* <AnimatePresence>
                             {
                               showProject === null &&
                               <motion.span
@@ -117,7 +116,7 @@ export default function Work() {
                                 →
                               </motion.span>
                             }
-                          </AnimatePresence>
+                          </AnimatePresence> */}
                       </motion.div>
                     </div>
                   }
@@ -126,7 +125,7 @@ export default function Work() {
               )
             })
           }
-          <AnimatePresence>
+          {/* <AnimatePresence>
             {
               // Last horizontal line
               showProject === null &&
@@ -136,7 +135,7 @@ export default function Work() {
               exit={{width: 0, transition: {duration: 1, delay: 0, ease: [.8,0,0,.8]}}}
               />
             }
-            </AnimatePresence>
+            </AnimatePresence> */}
         </div>
       </motion.div>
 

@@ -8,12 +8,6 @@ import { motion } from "framer-motion"
 export default function Home() {
     return (
         <motion.div className="App">
-
-            {/* <motion.div className="transition-cover"
-            initial={{scaleY: 0}}
-            exit={{scaleY: 1, transition: {duration: 1, ease: [.2,0,0,1]}}}
-            /> */}
-
           <Header />
           <About />
           <motion.Marquee autoFill style={{borderTop: "0.5px solid black", paddingTop: 24, paddingBottom: 24, backgroundColor: "#C2D5FF"}}

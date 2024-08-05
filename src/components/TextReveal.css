@@ -1,5 +1,7 @@
 .work-text {
-  max-width: 70vw;
+  box-sizing: border-box;
+  padding: 24px;
+  max-width: 50vw;
   text-align: justify;
 }
 

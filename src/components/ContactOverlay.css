@@ -1,6 +1,6 @@
 .contact-overlay {
-  /* background-color: #a9bae0; */
-  background-color: #131313;
+  font-family: "Work Sans", sans-serif;
+  background-color: #a9bae0;
   color: #F5F5F5;
   position: fixed;
   top: 0;
@@ -14,40 +14,35 @@
 }
 
 .contact-list {
-  width: 50vw;
   display: flex;
-  /* justify-content: space-between; */
-  gap: 48px;
+  gap: 12px;
   flex-direction: column;
-  font-family: "Noto Serif Display", serif;
-  /* position: fixed;
-  bottom: 24px;
-  left: 24px; */
 }
 
 .contact-crop {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .contact-link {
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 500;
   text-decoration: none;
+  color: #F5F5F5;
 }
 
 .contact-portrait-container {
   height: 300px;
   width: 50vw;
-  /* display: flex;
-  justify-content: flex-end; */
-  /* position: fixed;
+  position: fixed;
+  bottom: 24px;
   left: 24px;
-  top: 24px; */
 }
 
 .contact-portrait {
   height: 100%;
-  /* width: 100%; */
   object-fit: cover;
 }
 

@@ -1,6 +1,6 @@
 .work-imgs {
   width: 100vw;
-  max-height: 50vh;
+  max-height: 70vh;
   display: flex;
   justify-content: center;
   gap: 48px;
@@ -9,6 +9,7 @@
 
 .work-img-container {
   width: 60vw;
+  /* height: 70vh; */
   padding: 24px;
   display: flex;
   justify-content: center;

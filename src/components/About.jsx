@@ -56,7 +56,7 @@ export default function About() {
                 A little bit about me
               </motion.p>
 
-              <div className="about-paragraph">
+              <motion.div className="about-paragraph" style={{textIndent: "48px"}}>
                 {"I’m a dual American-Irish citizen. Rumor has it I come from a line of bards. Collaborating with good people to let language shine charms me.".split(" ").map((word) => {
                   return (
                     <span style={{display: "inline-block", overflow: "hidden", lineHeight: "3.6rem"}}>
@@ -67,7 +67,7 @@ export default function About() {
                     </span>
                   )
                 })}
-              </div>
+              </motion.div>
                 <br />
               <div className="about-paragraph">
                 {"Italo disco, arthouse films, and esoterica are some things that get me going. In a former life, I was a visual artist.".split(" ").map((word) => {

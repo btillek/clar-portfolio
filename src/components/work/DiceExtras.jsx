@@ -21,18 +21,15 @@ export default function DiceExtras() {
           </TextReveal>
 
           <ImageReveal image={ExtrasImg2} />
-
+          
           <TextReveal>
             <p>“Add-ons” is easy to understand, but comes off as dry and superfluous</p>
             <p>“Upgrades” didn’t work as it could be mistaken for getting a better ticket type</p>
-          </TextReveal>
-          <TextReveal>
             <p>“Extras” ended up being perfect as it doesn’t diminish the experience of just having a ticket</p>
             <p>Fans in the UK were especially sensitive to any kind of exclusionary language, especially considering DICE’s DIY punk roots</p>
-          </TextReveal>
-          <TextReveal>
             <p>We introduce extras on native and web in slightly different ways (less vs. more space, can only buy extras in the app for now)</p>
           </TextReveal>
+
 
           <ImageReveal image={ExtrasImg3} />
 

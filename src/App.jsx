@@ -44,24 +44,6 @@ function App() {
       </AnimatePresence>
     </>
   )
-  // return (
-  //   <div className="App">
-  //     <Navbar setShowContact={setShowContact} />
-  //     <Header />
-  //     <About />
-  //     <Marquee autoFill style={{borderTop: "0.5px solid black", paddingTop: 24, paddingBottom: 24, backgroundColor: "#C2D5FF"}}>
-  //       <a href="mailto:clartillekens@gmail.com"
-  //       style={{marginRight: 480, textDecoration: "none", color: "black"}}
-  //       >Let's work together</a>
-  //     </Marquee>
-
-  //     <ContactOverlay showContact={showContact} setShowContact={setShowContact}/>
-  //     {/* <Personal1 /> */}
-  //     {/* <MenuOverlay showMenu={showMenu} setShowMenu={setShowMenu} setShowResume={setShowResume}/> */}
-  //     {/* <Resume /> */}
-  //     <Footer />
-  //   </div>
-  // );
 }
 
 export default App;
