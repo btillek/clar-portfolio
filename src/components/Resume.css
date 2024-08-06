@@ -35,6 +35,8 @@
 
 .resume-place {
   /* width: 30vw; */
+  position: relative;
+  left: -24px;
   font-weight: 700;
 }
 

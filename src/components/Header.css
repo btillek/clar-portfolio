@@ -20,13 +20,14 @@
 .sub-header-crop {
   overflow: hidden;
   display: flex;
-  /* position: fixed;
+
+  position: fixed;
   bottom: 24px;
-  right: 24px; */
+  right: 24px;
 }
 
 .sub-header {
-  font-size: 2vw;
+  font-size: 1rem;
   margin-top: 24px;
   display: flex;
 }

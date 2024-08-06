@@ -4,7 +4,6 @@
 
 .about-container {
   border-top: 0.5px solid black;
-  /* background-color: #FDFDFD; */
   display: flex;
   position: sticky;
   top: 25vh;
@@ -19,7 +18,6 @@
   display: flex;
   align-items: flex-start;
   font-size: 2rem;
-  /* font-size: 3vw; */
   font-weight: 400;
   padding-bottom: 48px;
 }
@@ -28,14 +26,11 @@
   display: flex;
   justify-content: flex-start;
   gap: 260px;
-  /* overflow: scroll; */
-  /* width: 300vw; */
 }
 
 .about-paragraph {
   width: 75vw;
   margin: 0;
-  /* padding-right: 48px; */
   color: rgb(64, 64, 64);
 }
 
@@ -51,15 +46,10 @@
 .portrait-container {
   height: 300px;
   padding: 24px;
-  /* display: flex;
-  justify-content: flex-end; */
   position: relative;
   top: -248px;
 }
 
 .portrait {
   height: 200px;
-  /* border: 1px solid black; */
-  /* position: sticky;
-  top: 24px; */
 }

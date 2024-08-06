@@ -1,13 +1,18 @@
 import './DiceExtras.css'
 import ImageReveal from '../ImageReveal'
 import TextReveal from '../TextReveal'
-import ExtrasImg2 from '../../assets/Screenshot 2024-07-25 at 4.29.43 PM.png'
+import ImageSlider from '../ImageSlider'
+import ExtrasImg1 from '../../assets/ExtrasImgs/Version+1.png'
+import ExtrasImg2 from '../../assets/ExtrasImgs/Extras+web.png'
 import ExtrasImg3 from '../../assets/Screenshot 2024-07-26 at 11.19.36 AM.png'
 import ExtrasImg4 from '../../assets/Screenshot 2024-07-26 at 12.16.56 PM.png'
 import ExtrasImg5 from '../../assets/Screenshot 2024-07-26 at 12.19.42 PM.png'
 import { motion } from 'framer-motion'
 
 export default function DiceExtras() {
+
+  const images = [ ExtrasImg1, ExtrasImg2, ExtrasImg3, ExtrasImg4, ExtrasImg5 ]
+
   return (
     <div className="work-wrapper">
       <motion.div className="work-body"
@@ -20,8 +25,13 @@ export default function DiceExtras() {
             <p>“Extras” is the term I came up with for non-ticket purchases – when fans have the option to buy experiences after they get their tickets</p>
           </TextReveal>
 
-          <ImageReveal image={ExtrasImg2} />
-          
+          <ImageSlider images={images} />
+
+          {/* <div style={{display: "flex", justifyContent: "space-between"}}>
+            <ImageReveal image={ExtrasImg1} />
+            <ImageReveal image={ExtrasImg2} />
+          </div> */}
+
           <TextReveal>
             <p>“Add-ons” is easy to understand, but comes off as dry and superfluous</p>
             <p>“Upgrades” didn’t work as it could be mistaken for getting a better ticket type</p>
@@ -30,8 +40,7 @@ export default function DiceExtras() {
             <p>We introduce extras on native and web in slightly different ways (less vs. more space, can only buy extras in the app for now)</p>
           </TextReveal>
 
-
-          <ImageReveal image={ExtrasImg3} />
+          <ImageSlider images={images} />
 
           <TextReveal>
             <p>Since we control the illustrations for each extra, I made sure we also controlled the initial generic descriptions</p>
