@@ -2,20 +2,36 @@ import './DiceExtras.css'
 import ImageReveal from '../ImageReveal'
 import TextReveal from '../TextReveal'
 import ImageSlider from '../ImageSlider'
-import ExtrasImg1 from '../../assets/ExtrasImgs/Version+1.png'
+import ImageScroller from '../ImageScroller'
+import ExtrasImg1 from '../../assets/ExtrasImgs/Confirmation+-+Extras.png'
 import ExtrasImg2 from '../../assets/ExtrasImgs/Extras+web.png'
-import ExtrasImg3 from '../../assets/Screenshot 2024-07-26 at 11.19.36 AM.png'
-import ExtrasImg4 from '../../assets/Screenshot 2024-07-26 at 12.16.56 PM.png'
-import ExtrasImg5 from '../../assets/Screenshot 2024-07-26 at 12.19.42 PM.png'
+import ExtrasImg3 from '../../assets/ExtrasImgs/extras+ticket+view.png'
+import ExtrasImg4 from '../../assets/ExtrasImgs/Extras+View.png'
+import ExtrasImg5 from '../../assets/ExtrasImgs/Checkout+View.png'
+import ExtrasImg6 from '../../assets/ExtrasImgs/Version+1.png'
+import ExtrasImg7 from '../../assets/ExtrasImgs/After+party.png'
+import ExtrasImg8 from '../../assets/ExtrasImgs/Extras+Promo+Banner-2.png'
+import ExtrasImg9 from '../../assets/ExtrasImgs/Extras+Promo+Banner-1.png'
+import ExtrasImg10 from '../../assets/ExtrasImgs/VIP+pass.png'
+import ExtrasImg11 from '../../assets/ExtrasImgs/Extras+Promo+Banner-5.png'
+import ExtrasImg12 from '../../assets/ExtrasImgs/Extras+Promo+Banner.png'
+import ExtrasImg13 from '../../assets/ExtrasImgs/home+extra+banner.png'
+import ExtrasImg14 from '../../assets/ExtrasImgs/On+The+Day+Notifications+hi.png'
+import ExtrasImg15 from '../../assets/ExtrasImgs/On+The+Day+Notifications-1.png'
+
 import { motion } from 'framer-motion'
 
 export default function DiceExtras() {
 
-  const images = [ ExtrasImg1, ExtrasImg2, ExtrasImg3, ExtrasImg4, ExtrasImg5 ]
+  const images = [ ExtrasImg1, ExtrasImg2 ]
+  const images2 = [ ExtrasImg3, ExtrasImg4, ExtrasImg5, ExtrasImg6 ]
+  const images3 = [ ExtrasImg7, ExtrasImg8, ExtrasImg9, ExtrasImg10, ExtrasImg11, ExtrasImg12]
+  const images4 = [ ExtrasImg13, ExtrasImg14, ExtrasImg15 ]
 
   return (
     <div className="work-wrapper">
-      <motion.div className="work-body"
+      <motion.div
+      className="work-body"
       initial={{y: window.innerHeight}}
       animate={{y: 0, transition: {duration: 1, delay: 1, ease: [0.5, 0, 0, 1]}}}
       exit={{x: window.innerWidth, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
@@ -26,6 +42,7 @@ export default function DiceExtras() {
           </TextReveal>
 
           <ImageSlider images={images} />
+          {/* <ImageScroller images={images} /> */}
 
           {/* <div style={{display: "flex", justifyContent: "space-between"}}>
             <ImageReveal image={ExtrasImg1} />
@@ -40,7 +57,7 @@ export default function DiceExtras() {
             <p>We introduce extras on native and web in slightly different ways (less vs. more space, can only buy extras in the app for now)</p>
           </TextReveal>
 
-          <ImageSlider images={images} />
+          <ImageSlider images={images2} />
 
           <TextReveal>
             <p>Since we control the illustrations for each extra, I made sure we also controlled the initial generic descriptions</p>
@@ -48,7 +65,7 @@ export default function DiceExtras() {
             <p>On the confirmation screen I wanted to make fans felt confident and satisfied with their decision to get an extra</p>
           </TextReveal>
 
-          <ImageReveal image={ExtrasImg4} />
+          <ImageSlider images={images3} />
 
           <TextReveal>
             <p>DICE introduces extras, a bit generic (as we don’t know exactly what each partner will offer) but still cool and enticing</p>
@@ -61,7 +78,7 @@ export default function DiceExtras() {
             </ul>
           </TextReveal>
 
-          <ImageReveal image={ExtrasImg5} />
+          <ImageSlider images={images4} />
 
           <TextReveal>
             <p>We show these messages to fans who just bought tickets after some time had passed</p>

@@ -2,18 +2,14 @@ import '../components/Work.css'
 import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useState } from "react"
 import { workProjects } from '../work-projects-data'
-import TransitionSwipe from '../components/TransitionSwipe'
 import DiceExtras from '../components/work/DiceExtras'
 import DiceExtras2 from '../components/work/DiceExtras2'
 import DiceGroups from '../components/work/DiceGroups'
 import DiceBeyond from '../components/work/DiceBeyond'
 import DiceSpotify from '../components/work/DiceSpotify'
+import { Undo2 } from 'lucide-react'
 
 export default function Work() {
-
-  useEffect(() => {
-    document.documentElement.scrollTop = 0;
-  }, [])
 
   const [ showProject, setShowProject ] = useState(null)
   const [ highlightProject, setHighlightProject ] = useState("Extras")
@@ -24,18 +20,17 @@ export default function Work() {
 
   return (
     <>
-      {/* <TransitionSwipe /> */}
       <motion.div className="work-menu"
       initial={{y: window.innerWidth}}
       animate={{y: 0, transition: {duration: 1, ease: [.2,0,0,1]}}}
-      exit={{y: "100%", transition: {duration: 1, delay: 0.5, ease: [.5,0,0,.5]}}}
+      exit={{y: "100%", transition: {duration: 1, ease: [.5,0,0,.5]}}}
       >
         {
           showProject === null
           ?
           <div style={{position: "fixed", bottom: "24px", left: "24px", fontSize: "1rem", transform: "skew(-15deg)"}}>Some of my favorite projects</div>
           :
-          <div style={{position: "fixed", bottom: "24px", left: "24px", fontSize: "1rem", transform: "skew(-15deg)"}}>← Back</div>
+          <div style={{position: "fixed", bottom: "24px", left: "24px", fontSize: "1rem", transform: "skew(-15deg)"}} onClick={() => setShowProject(null)}>Back</div>
         }
 
         <div className="work-project-content">
