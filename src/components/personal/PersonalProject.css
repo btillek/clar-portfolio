@@ -2,70 +2,42 @@
   width: 100vw;
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
-  display: flex;
+  /* display: flex; */
 }
 
 .personal-project-text {
   box-sizing: border-box;
   width: 50vw;
   min-height: 100vh;
-  /* position: sticky; */
-  /* overflow: scroll; */
-  top: 0;
-  color: #000000;
-  padding: 48px;
-  padding-top: 40vh;
+  padding: 48px 48px 0 0;
+  /* padding-top: 25vh; */
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
-  gap: 24px;
+  /* gap: 24px; */
   cursor: e-resize;
 }
 
 .personal-project-title {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 600;
   margin: 0;
   padding-bottom: 16px;
   text-transform: uppercase;
   border-bottom: .5px solid black;
   display: flex;
+  padding-right: 72px;
 }
 
 .personal-project-paragraph {
-  border-bottom: .5px solid black;
+  /* border-bottom: .5px solid black; */
   padding-bottom: 24px;
 }
 
 .personal-project-line {
   display: block;
-  font-size: 2rem;
-  line-height: 4rem;
-  margin-bottom: 36px;
+  font-size: 1rem;
+  line-height: 2rem;
 }
-
-/* .personal-project-link {
-  opacity: 0.5;
-  transition: 0.5s ease;
-  position: fixed;
-  transform: rotate(-90deg);
-  right: -48px;
-  top: calc(50vh);
-  display: flex;
-  justify-content: center;
-  font-weight: 300;
-  font-size: 1rem;
-} */
-
-/* .personal-project-link {
-  opacity: 0.5;
-  color: #000000;
-  transition: 0.5s ease;
-  position: fixed;
-  top: 24px;
-  font-weight: 300;
-  font-size: 1rem;
-} */
 
 .personal-project-link {
   opacity: 0.5;
@@ -79,24 +51,33 @@
 }
 
 .personal-project-footnote {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
   display: flex;
   justify-content: space-between;
-
+  border-top: .5px solid black;
+  width: calc(50vw - 24px);
+  background-color: #EAE9EC;
+  padding-top: 12px;
 }
 
 .personal-project-img-container {
-  width: 50vw;
+  width: 33vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: sticky;
-  top:0
+  top:0;
+  /* padding: 24px; */
+  box-sizing: border-box;
 }
 
 .personal-project-img {
   object-fit: cover;
   width: 100%;
+  height: 100%;
   margin: 0;
 }
 

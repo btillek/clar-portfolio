@@ -22,16 +22,19 @@ export default function Work() {
     <>
       <motion.div className="work-menu"
       initial={{y: window.innerWidth}}
-      animate={{y: 0, transition: {duration: 1, ease: [.2,0,0,1]}}}
+      animate={{y: 0, transition: {duration: 1, delay: .5, ease: [.2,0,0,1]}}}
       exit={{y: "100%", transition: {duration: 1, ease: [.5,0,0,.5]}}}
       >
-        {
-          showProject === null
-          ?
-          <div style={{position: "fixed", bottom: "24px", left: "24px", fontSize: "1rem", transform: "skew(-15deg)"}}>Some of my favorite projects</div>
-          :
-          <div style={{position: "fixed", bottom: "24px", left: "24px", fontSize: "1rem", transform: "skew(-15deg)"}} onClick={() => setShowProject(null)}>Back</div>
-        }
+        <AnimatePresence>
+          {
+            showProject !== null &&
+            <motion.div className="back-btn" onClick={() => setShowProject(null)}
+            initial={{x: -150}}
+            animate={{x: 0}}
+            exit={{x: -150}}
+            >Back</motion.div>
+          }
+        </AnimatePresence>
 
         <div className="work-project-content">
           <AnimatePresence>

@@ -41,6 +41,7 @@ export default function DiceExtras() {
             <p>“Extras” is the term I came up with for non-ticket purchases – when fans have the option to buy experiences after they get their tickets</p>
           </TextReveal>
 
+
           <ImageSlider images={images} />
           {/* <ImageScroller images={images} /> */}
 

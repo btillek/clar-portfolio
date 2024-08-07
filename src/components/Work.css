@@ -90,3 +90,19 @@
   width: 25vw;
   object-fit: cover;
 }
+
+.back-btn {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  font-size: 1rem;
+  font-style: italic;
+  transition: .5s ease;
+  z-index: 20;
+}
+
+.back-btn:hover {
+  cursor: pointer;
+  opacity: .5;
+  transition: .5s ease;
+}

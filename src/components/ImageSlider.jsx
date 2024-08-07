@@ -1,7 +1,7 @@
 import './ImageSlider.css'
 import { useState } from 'react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
 export default function ImageSlider({ images }) {
@@ -16,10 +16,11 @@ export default function ImageSlider({ images }) {
   }
 
   return (
-    <div
-    style={{width: "100vw", height: "70vh", position: "relative"}}
-    >
-      <div
+    <div style={{width: "100vw", height: "70vh", position: "relative"}}>
+      <motion.div
+      initial={{y: 150, opacity: 0}}
+      whileInView={{y: 0, opacity: 1, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+      viewport={{ once: true, amount: 0.2 }}
       style={{width: "100vw", height: "70vh", display: "flex", overflow: "scroll"}}
       >
         {
@@ -31,9 +32,15 @@ export default function ImageSlider({ images }) {
             )
           })
         }
-      </div>
-      <div onClick={showPrevImage} className="arrow-btn" style={{ left: 0 }}><ArrowLeft /></div>
-      <div onClick={showNextImage} className="arrow-btn" style={{ right: 0 }}><ArrowRight /></div>
+      </motion.div>
+
+      {
+        images.length > 1 &&
+        <>
+          <div onClick={showPrevImage} className="arrow-btn" style={{ left: 0 }}><ArrowLeft /></div>
+          <div onClick={showNextImage} className="arrow-btn" style={{ right: 0 }}><ArrowRight /></div>
+        </>
+      }
     </div>
 
     // <div className="img-slider-container">
