@@ -1,5 +1,4 @@
 import './DiceExtras.css'
-import ImageReveal from '../ImageReveal'
 import TextReveal from '../TextReveal'
 import GroupsImg1 from '../../assets/GroupsImgs/Empty.png'
 import GroupsImg2 from '../../assets/GroupsImgs/Landing.png'

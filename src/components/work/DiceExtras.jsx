@@ -50,13 +50,26 @@ export default function DiceExtras() {
             <ImageReveal image={ExtrasImg2} />
           </div> */}
 
-          <TextReveal>
+
+          <div style={{display: "flex", gap: "48px", width: "80vw", margin: "48px 0", borderBottom: ".5px solid black"}}>
+            <div style={{width: "50%", marginLeft: "24px", boxSizing: "border-box"}}>
+              <p>“Add-ons” is easy to understand, but comes off as dry and superfluous</p>
+              <p>“Upgrades” didn’t work as it could be mistaken for getting a better ticket type</p>
+              <p>“Extras” ended up being perfect as it doesn’t diminish the experience of just having a ticket</p>
+            </div>
+            <div style={{width: "50%", marginRight: "24px", boxSizing: "border-box"}}>
+              <p>Fans in the UK were especially sensitive to any kind of exclusionary language, especially considering DICE’s DIY punk roots</p>
+              <p>We introduce extras on native and web in slightly different ways (less vs. more space, can only buy extras in the app for now)</p>
+            </div>
+          </div>
+
+          {/* <TextReveal>
             <p>“Add-ons” is easy to understand, but comes off as dry and superfluous</p>
             <p>“Upgrades” didn’t work as it could be mistaken for getting a better ticket type</p>
             <p>“Extras” ended up being perfect as it doesn’t diminish the experience of just having a ticket</p>
             <p>Fans in the UK were especially sensitive to any kind of exclusionary language, especially considering DICE’s DIY punk roots</p>
             <p>We introduce extras on native and web in slightly different ways (less vs. more space, can only buy extras in the app for now)</p>
-          </TextReveal>
+          </TextReveal> */}
 
           <ImageSlider images={images2} />
 

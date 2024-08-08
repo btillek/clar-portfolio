@@ -1,5 +1,4 @@
 import './DiceExtras.css'
-import ImageReveal from '../ImageReveal'
 import TextReveal from '../TextReveal'
 import BeyondImg1 from '../../assets/BeyondImgs/Group+835.png'
 import BeyondImg2 from '../../assets/BeyondImgs/Group+837.png'
@@ -63,7 +62,7 @@ export default function DiceBeyond() {
         </TextReveal>
 
         <ImageSlider images={images5} />
-        
+
       </motion.div>
     </div>
   )

@@ -52,7 +52,7 @@ export default function Work() {
                 {
                   highlightProject === project.title && showProject === null &&
                   <div  className="thumbnail-container">
-                    <motion.img src={project.img} alt="" style={{width: "33vw", height: "33vw", objectFit: "cover"}}
+                    <motion.img src={project.img} alt="" style={{width: "300px", height: "300px", objectFit: "cover"}}
                     initial={{clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"}}
                     animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: .3, ease: [0.5, 0, 0, 1]}}}
                     exit={{clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)", transition: {duration: .3, delay: 0.3, ease: [0.5, 0, 0, 1]}}}

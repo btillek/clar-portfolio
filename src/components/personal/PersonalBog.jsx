@@ -14,52 +14,54 @@ const projectContent = [
   "Just annual dips and daily peat spritzes.",
 ]
 
-export default function PersonalBog({ setShowProject }) {
+export default function PersonalBog() {
   return (
     <div className="personal-project-body">
 
-      <div className="personal-project-left">
-        <motion.h2 className="personal-project-title"
-        initial={{y: window.innerHeight}}
-        animate={{y: 0, transition: {duration: 1, delay: 0.5, ease: [0.5, 0, 0, 1]}}}
-        exit={{y: -window.innerHeight, transition: {duration: 1, delay: 0.5, ease: [0.5, 0, 0, 1]}}}
-        >
-          BOG
-        </motion.h2>
+      <motion.h2 className="personal-project-title">
+        Bog
+      </motion.h2>
 
-        <motion.div className="personal-project-img-container"
-        initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
-        animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-        exit={{clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-        >
-          <img src={ImgBottle} alt="" className="personal-project-img" />
-          <img src={ImgCross} alt="" className="personal-project-img" />
+      <div className="personal-project-middle">
+
+        <div className="personal-project-img-container">
+          <motion.img src={ImgBottle} alt="" className="personal-project-img"
+          initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
+          animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+          exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+          />
+          <img src={ImgCross} alt="" className="personal-project-img" style={{height: "400px"}}/>
           <img src={ImgChurch} alt="" className="personal-project-img" />
+        </div>
+
+        <motion.div className="personal-project-text">
+
+          <div className="personal-project-paragraph">
+            {
+              projectContent.map((line, i) => {
+                return (
+                  <motion.div style={{overflow: "hidden"}}>
+                    <motion.span
+                    initial={{y: 250}}
+                    animate={{y: 0, transition: {duration: 1, delay: 0.1 * i, ease: [0.5, 0, 0, 1]}}}
+                    exit={{y: -250, transition: {duration: 1, delay: 0.1 * i, ease: [0.5, 0, 0, 1]}}}
+                    >
+                      {line}
+                    </motion.span>
+                  </motion.div>
+                )
+              })
+            }
+          </div>
         </motion.div>
+
       </div>
 
-      <div className="personal-project-text" onClick={() => setShowProject("Diet ode to my ancestors")}>
-      <div className="personal-project-paragraph">
-        {
-          projectContent.map((line, i) => {
-            return (
-              <span style={{overflow: "hidden"}}>
-                <motion.span className="personal-project-line"
-                initial={{y: window.innerHeight}}
-                animate={{y: 0, transition: {duration: 1, delay: 0.1 * i, ease: [0.5, 0, 0, 1]}}}
-                exit={{y: -window.innerHeight, transition: {duration: 1, delay: 0.1 * i, ease: [0.5, 0, 0, 1]}}}
-                >
-                  {line}
-                </motion.span>
-              </span>
-            )
-          })
-        }
-      </div>
-
+      <div className="personal-project-footnote">
         <a href="https://hot-potato.news/" target="_blank" rel="noreferrer" className="personal-project-link">
-          ( Published in Hot Potato )
+        ( Published in Hot Potato )
         </a>
+        <span style={{fontStyle: "italic", fontSize: "1rem", opacity: .5}}>Sept 15, 2023</span>
       </div>
 
     </div>

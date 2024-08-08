@@ -1,5 +1,4 @@
 import '../components/Personal.css'
-import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
 import PersonalOde from "../components/personal/PersonalOde"
 import PersonalBog from "../components/personal/PersonalBog"
@@ -7,9 +6,6 @@ import PersonalChocolate from "../components/personal/PersonalChocolate"
 import PersonalFeuer from "../components/personal/PersonalFeuer"
 
 export default function Personal() {
-
-  document.documentElement.scrollTop = 0;
-
   const projects = [
     "Diet ode to my ancestors",
     "Bog",
@@ -31,13 +27,13 @@ export default function Personal() {
 
   return (
     <>
+      {/* <h2 style={{fontSize: "3rem", padding: "24px", height: "20vh", position: "sticky", top: 0}}>Personal writing</h2> */}
       <div>
-        <AnimatePresence>
-          { showProject === "Diet ode to my ancestors" && <PersonalOde setShowProject={setShowProject}/> }
-        </AnimatePresence>
-        <AnimatePresence>
-          { showProject === "Chocolate" && <PersonalChocolate setShowProject={setShowProject}/> }
-        </AnimatePresence>
+          <div style={{position: "sticky", top: 0}}><PersonalOde/></div>
+          <div style={{position: "sticky", top: 0}}><PersonalBog /></div>
+
+          {/* { showProject === "Diet ode to my ancestors" && <PersonalOde setShowProject={setShowProject}/> } */}
+          {/* { showProject === "Chocolate" && <PersonalChocolate setShowProject={setShowProject}/> } */}
           {/* <PersonalChocolate /> */}
       </div>
     </>

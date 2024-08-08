@@ -3,6 +3,8 @@ import ImgBeer from '../../assets/Screenshot 2024-07-22 at 4.20.16 PM.png'
 import ImgButter from '../../assets/Screenshot 2024-07-30 at 3.07.14 PM.png'
 import { motion } from 'framer-motion'
 import Marquee from 'react-fast-marquee'
+import { useEffect, useState } from 'react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 const projectContent = [
   "Guggering potatoes. You heard that right? It’s not googling.",
@@ -20,88 +22,82 @@ const projectContent = [
   " • Boxty"
 ]
 
-export default function PersonalOde( { setShowProject }) {
-
+export default function PersonalOde() {
   return (
-    <div className="personal-project-body"
-    // style={{backgroundColor: "#F2EDE6", color: "black"}}
+    <motion.div className="personal-project-body"
+    initial={{y: window.innerHeight}}
+    animate={{y: 0, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+    exit={{y: window.innerHeight, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
     >
-      <div style={{marginTop: "96px"}}>
-        <Marquee>
-          <motion.h2 className="personal-project-title">
-            <span style={{display: "inline", fontSize: "1rem", marginRight: "24px", marginBottom: "6px"}}>01</span>
-            Diet ode to my ancestors
-          </motion.h2>
-          <motion.h2 className="personal-project-title">
-            <span style={{display: "inline", fontSize: "1rem", marginRight: "24px", marginBottom: "6px"}}>01</span>
-            Diet ode to my ancestors
-          </motion.h2>
-        </Marquee>
-      </div>
 
-      <div style={{display: "flex", justifyContent: "flex-start"}}>
-
-        {/* <div className="personal-project-left">
-
-          <motion.div className="personal-project-img-container"
-          initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
-          animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-          exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+        <h2 className="personal-project-title">
+          {
+            "Diet ode to my ancestors".split(" ").map((word, i) => {
+              return (
+                <motion.div
+                style={{display: "inline-block"}}
+                initial={{y: 150}}
+                animate={{y: 0, transition: {duration: 1, delay: 0.1 * i + .5, ease: [0.5, 0, 0, 1]}}}
+                exit={{y: -150, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+                >
+                  {word}&nbsp;
+                </motion.div>
+              )
+            })
+          }
+          {/* <motion.div
+          initial={{y: 150}}
+          animate={{y: 0, transition: {duration: 1, delay: 1, ease: [0.5, 0, 0, 1]}}}
+          exit={{y: -150, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
           >
-            <img src={ImgBeer} alt="" className="personal-project-img"/>
-            <img src={ImgButter} alt="" className="personal-project-img"/>
-          </motion.div>
+            Diet ode to  my ancestors
+          </motion.div> */}
+        </h2>
 
-        </div> */}
+      <div className="personal-project-middle">
 
-        <div style={{width: "50vw"}}></div>
+          <div className="personal-project-img-container"
 
-        <motion.div className="personal-project-text"
-        onClick={() => {setShowProject("Chocolate")}}
-        initial={{y: -window.innerHeight}}
-        animate={{y: 0, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-        exit={{y: -window.innerHeight, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-        >
-          {/* <motion.h2 className="personal-project-title">
-          <span style={{display: "inline", fontSize: "1rem", marginRight: "24px", marginBottom: "6px"}}>01</span>
-            Diet ode to my ancestors
-          </motion.h2> */}
+          >
+            <motion.img src={ImgBeer} alt="" className="personal-project-img" style={{height: "400px"}}
+            initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
+            animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, delay: 1, ease: [0.5, 0, 0, 1]}}}
+            exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+            />
+            <motion.img src={ImgButter} alt="" className="personal-project-img"
+            initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
+            animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, delay: 1.5, ease: [0.5, 0, 0, 1]}}}
+            exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+            />
+          </div>
 
-          <div className="personal-project-paragraph">
-            {
-              projectContent.map((line, i) => {
-                return (
-                  <motion.div style={{overflow: "hidden"}}>
-                    <motion.span className="personal-project-line"
-                    initial={{y: 250}}
-                    animate={{y: 0, transition: {duration: 1, delay: 0.1 * i, ease: [0.5, 0, 0, 1]}}}
-                    exit={{y: -250, transition: {duration: 1, delay: 0.1 * i, ease: [0.5, 0, 0, 1]}}}
-                    >
-                      {line}
-                    </motion.span>
+        <div className="personal-project-text">
+          {
+            projectContent.map((line, i) => {
+              return (
+                <motion.div style={{overflow: "hidden"}}>
+                  <motion.div
+                  initial={{y: 50}}
+                  animate={{y: 0, transition: {duration: 1, delay: 0.1 * i + 1.5, ease: [0.5, 0, 0, 1]}}}
+                  exit={{y: -50, transition: {duration: 1, delay: 0.1 * i, ease: [0.5, 0, 0, 1]}}}
+                  >
+                    {line}
                   </motion.div>
-                )
-              })
-            }
-          </div>
-          <div className="personal-project-footnote">
-            <a href="https://spectrapoets.org/Diet-ode-to-my-ancestors-by-Clar-Tillekens" target="_blank" rel="noreferrer" className="personal-project-link">
-              ( Published in Spectra )
-            </a>
-            <span style={{fontStyle: "italic", fontSize: "1rem", opacity: .5}}>Sept 15, 2023</span>
-          </div>
-        </motion.div>
+                </motion.div>
+              )
+            })
+          }
+        </div>
+
       </div>
 
-      <motion.div className="personal-project-img-container"
-          initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
-          animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-          exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-          >
-            <img src={ImgBeer} alt="" className="personal-project-img"/>
-            <img src={ImgButter} alt="" className="personal-project-img"/>
-          </motion.div>
+      <div className="personal-project-footnote">
+        <a href="https://spectrapoets.org/Diet-ode-to-my-ancestors-by-Clar-Tillekens" target="_blank" rel="noreferrer" className="personal-project-link">
+          ( Published in Spectra )
+        </a>
+        <span style={{fontStyle: "italic", fontSize: "1rem", opacity: .5}}>Sept 15, 2023</span>
+      </div>
 
-    </div>
+    </motion.div>
   )
 }
