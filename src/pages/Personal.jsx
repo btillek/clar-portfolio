@@ -34,11 +34,7 @@ export default function Personal() {
           <div><PersonalOde/></div>
           <div><PersonalBog /></div>
           <div><PersonalChocolate /></div>
-
-
-          {/* { showProject === "Diet ode to my ancestors" && <PersonalOde setShowProject={setShowProject}/> } */}
-          {/* { showProject === "Chocolate" && <PersonalChocolate setShowProject={setShowProject}/> } */}
-          {/* <PersonalChocolate /> */}
+          <div><PersonalFeuer /></div>
       </div>
     </>
   )
