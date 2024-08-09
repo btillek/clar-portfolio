@@ -14,11 +14,11 @@ export default function ImageSlider({ images }) {
   }, [])
 
   const showNextImage = () => {
-    setImageIndex((i) => i === images.length - 1 ? 0 : i + 1)
+    setImageIndex((i) => i === images.length - 1 ? i : i + 1)
   }
 
   const showPrevImage = () => {
-    setImageIndex((i) => i === 0 ? images.length - 1 : i - 1)
+    setImageIndex((i) => i === 0 ? 0 : i - 1)
   }
 
   const handleMouseEnter = (direction) => {
@@ -26,19 +26,21 @@ export default function ImageSlider({ images }) {
   }
 
 
-  console.log(imageIndex);
-
   return (
     <div style={{width: "100vw", height: "70vh", position: "relative"}}>
 
       {
         showArrow === "left" && images.length > 1 &&
-        <div style={{ zIndex: 30, position: "fixed", left: mousePos.x - 20, top: mousePos.y - 20 }}><ArrowLeft /></div>
+        <div style={imageIndex === 0 ? {opacity: .2} : null}>
+          <div style={{ zIndex: 30, position: "fixed", left: mousePos.x - 20, top: mousePos.y - 20 }}><ArrowLeft /></div>
+        </div>
       }
 
       {
         showArrow === "right" && images.length > 1 &&
-        <div style={{ zIndex: 30, position: "fixed", left: mousePos.x - 20, top: mousePos.y - 20 }}><ArrowRight /></div>
+        <div style={imageIndex === images.length - 1 ? {opacity: .2} : null}>
+          <div style={{ zIndex: 30, position: "fixed", left: mousePos.x - 20, top: mousePos.y - 20 }}><ArrowRight /></div>
+        </div>
       }
 
       {
@@ -65,25 +67,18 @@ export default function ImageSlider({ images }) {
       viewport={{ once: true, amount: 0.2 }}
       style={{width: "100vw", height: "70vh", display: "flex", overflow: "scroll"}}
       >
-        {/* <div style={{width: "25vw", flexShrink: 0}}></div> */}
+        <div style={{width: "25vw", flexShrink: 0}}></div>
         {
           images.map((img) => {
             return(
               <img src={img} alt=""
-              style={{objectFit: "contain", width: "100vw", height: "100%", flexShrink: 0, translate: `${-100 * imageIndex}%`, transition: ".5s ease"}}
+              style={{objectFit: "contain", width: "50vw", height: "100%", flexShrink: 0, translate: `${-100 * imageIndex}%`, transition: ".5s ease"}}
               />
             )
           })
         }
       </motion.div>
 
-      {/* {
-        images.length > 1 &&
-        <>
-          <div onClick={showPrevImage} className="arrow-btn" style={{ left: 0 }}><ArrowLeft /></div>
-          <div onClick={showNextImage} className="arrow-btn" style={{ right: 0 }}><ArrowRight /></div>
-        </>
-      } */}
     </div>
 
     // <div className="img-slider-container">
@@ -97,5 +92,6 @@ export default function ImageSlider({ images }) {
     //   <div onClick={showPrevImage} className="arrow-btn" style={{ left: 0 }}><ArrowLeft /></div>
     //   <div onClick={showNextImage} className="arrow-btn" style={{ right: 0 }}><ArrowRight /></div>
     // </div>
+
   )
 }

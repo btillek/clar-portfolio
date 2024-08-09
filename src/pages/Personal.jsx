@@ -27,10 +27,14 @@ export default function Personal() {
 
   return (
     <>
-      {/* <h2 style={{fontSize: "3rem", padding: "24px", height: "20vh", position: "sticky", top: 0}}>Personal writing</h2> */}
-      <div>
-          <div style={{position: "sticky", top: 0}}><PersonalOde/></div>
-          <div style={{position: "sticky", top: 0}}><PersonalBog /></div>
+      <div style={{width: "100vw"}}>
+        <div style={{fontSize: "3rem", fontFamily: "Work Sans", fontWeight: "500", fontStyle: "italic", position: "fixed", top: "24px", left: "24px", zIndex: "30"}}>Personal writing</div>
+      </div>
+      <div style={{marginTop: "96px"}}>
+          <div><PersonalOde/></div>
+          <div><PersonalBog /></div>
+          <div><PersonalChocolate /></div>
+
 
           {/* { showProject === "Diet ode to my ancestors" && <PersonalOde setShowProject={setShowProject}/> } */}
           {/* { showProject === "Chocolate" && <PersonalChocolate setShowProject={setShowProject}/> } */}

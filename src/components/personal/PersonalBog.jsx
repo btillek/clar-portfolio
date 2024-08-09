@@ -18,21 +18,28 @@ export default function PersonalBog() {
   return (
     <div className="personal-project-body">
 
-      <motion.h2 className="personal-project-title">
-        Bog
+      <motion.h2 className="personal-project-title" style={{marginLeft: 0}}>
+        {
+          "Bog".split("").map((letter, i) => {
+            return (
+              <motion.div
+              style={{display: "inline-block"}}
+              initial={{y: 150}}
+              animate={{y: 0, transition: {duration: 1, delay: 0.1 * i + .5, ease: [0.5, 0, 0, 1]}}}
+              exit={{y: -150, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+              >
+                {letter}
+              </motion.div>
+            )
+          })
+        }
+        &nbsp;
+
       </motion.h2>
 
       <div className="personal-project-middle">
 
-        <div className="personal-project-img-container">
-          <motion.img src={ImgBottle} alt="" className="personal-project-img"
-          initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
-          animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-          exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-          />
-          <img src={ImgCross} alt="" className="personal-project-img" style={{height: "400px"}}/>
-          <img src={ImgChurch} alt="" className="personal-project-img" />
-        </div>
+
 
         <motion.div className="personal-project-text">
 
@@ -53,15 +60,23 @@ export default function PersonalBog() {
               })
             }
           </div>
+          <br />
+          <a href="https://hot-potato.news/" target="_blank" rel="noreferrer" className="personal-project-link">
+            ( Published in Hot Potato )
+          </a>
         </motion.div>
 
-      </div>
+        <div className="personal-project-img-container">
+          <motion.img src={ImgBottle} alt="" className="personal-project-img"
+          style={{marginTop: "-48px"}}
+          initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
+          animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+          exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+          />
+          <img src={ImgCross} alt="" className="personal-project-img" style={{height: "400px"}}/>
+          <img src={ImgChurch} alt="" className="personal-project-img" />
+        </div>
 
-      <div className="personal-project-footnote">
-        <a href="https://hot-potato.news/" target="_blank" rel="noreferrer" className="personal-project-link">
-        ( Published in Hot Potato )
-        </a>
-        <span style={{fontStyle: "italic", fontSize: "1rem", opacity: .5}}>Sept 15, 2023</span>
       </div>
 
     </div>

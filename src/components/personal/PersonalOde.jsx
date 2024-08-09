@@ -2,9 +2,6 @@ import './PersonalOde.css'
 import ImgBeer from '../../assets/Screenshot 2024-07-22 at 4.20.16 PM.png'
 import ImgButter from '../../assets/Screenshot 2024-07-30 at 3.07.14 PM.png'
 import { motion } from 'framer-motion'
-import Marquee from 'react-fast-marquee'
-import { useEffect, useState } from 'react'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 const projectContent = [
   "Guggering potatoes. You heard that right? It’s not googling.",
@@ -45,31 +42,24 @@ export default function PersonalOde() {
               )
             })
           }
-          {/* <motion.div
-          initial={{y: 150}}
-          animate={{y: 0, transition: {duration: 1, delay: 1, ease: [0.5, 0, 0, 1]}}}
-          exit={{y: -150, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-          >
-            Diet ode to  my ancestors
-          </motion.div> */}
         </h2>
 
       <div className="personal-project-middle">
 
-          <div className="personal-project-img-container"
-
-          >
-            <motion.img src={ImgBeer} alt="" className="personal-project-img" style={{height: "400px"}}
-            initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
-            animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, delay: 1, ease: [0.5, 0, 0, 1]}}}
-            exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-            />
-            <motion.img src={ImgButter} alt="" className="personal-project-img"
-            initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
-            animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, delay: 1.5, ease: [0.5, 0, 0, 1]}}}
-            exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-            />
-          </div>
+        <div className="personal-project-img-container"
+        style={{paddingLeft: "96px", paddingTop: "96px"}}
+        >
+          <motion.img src={ImgBeer} alt="" className="personal-project-img" style={{height: "400px", marginTop: "-48px"}}
+          initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
+          animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, delay: 1, ease: [0.5, 0, 0, 1]}}}
+          exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+          />
+          <motion.img src={ImgButter} alt="" className="personal-project-img"
+          initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
+          animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, delay: 1.5, ease: [0.5, 0, 0, 1]}}}
+          exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+          />
+        </div>
 
         <div className="personal-project-text">
           {
@@ -87,16 +77,20 @@ export default function PersonalOde() {
               )
             })
           }
+          <br />
+          <a href="https://spectrapoets.org/Diet-ode-to-my-ancestors-by-Clar-Tillekens" target="_blank" rel="noreferrer" className="personal-project-link">
+            ( Published in Spectra )
+          </a>
         </div>
 
       </div>
 
-      <div className="personal-project-footnote">
+      {/* <div className="personal-project-footnote">
         <a href="https://spectrapoets.org/Diet-ode-to-my-ancestors-by-Clar-Tillekens" target="_blank" rel="noreferrer" className="personal-project-link">
           ( Published in Spectra )
         </a>
         <span style={{fontStyle: "italic", fontSize: "1rem", opacity: .5}}>Sept 15, 2023</span>
-      </div>
+      </div> */}
 
     </motion.div>
   )

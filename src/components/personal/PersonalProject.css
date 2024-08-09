@@ -1,22 +1,23 @@
 .personal-project-body {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  /* background-color: white; */
   border: 1 solid black;
 }
 
 .personal-project-title {
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 600;
   padding: 24px;
-  margin: 0;
+  margin: 48px 0 0 50vw;
+  /* margin-left: 50vw; */
   text-transform: uppercase;
-  border-top: .5px solid black;
+  /* border-top: .5px solid black; */
   /* border-bottom: .5px solid black; */
   overflow: hidden;
 }
@@ -31,6 +32,7 @@
   width: 50vw;
   display: flex;
   flex-wrap: wrap;
+  /* align-items: center; */
   gap: 24px;
   padding: 24px;
   box-sizing: border-box;
@@ -53,7 +55,14 @@
   padding: 24px;
   font-size: 1rem;
   line-height: 2rem;
+  position: sticky;
+  top: 0;
 }
+
+/* .personal-project-paragraph {
+  position: sticky;
+  top: 0;
+} */
 
 .personal-project-footnote {
   display: flex;

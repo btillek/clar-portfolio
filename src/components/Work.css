@@ -11,6 +11,8 @@
 .work-menu {
   box-sizing: border-box;
   color: rgb(30, 30, 30);
+  /* color: rgb(200, 200, 200);
+  background-color: rgb(31, 31, 31);; */
   /* background-color: #F5FE8B; */
   min-height: 100vh;
   font-family: "Work Sans", sans-serif;
