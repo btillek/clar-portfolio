@@ -28,7 +28,7 @@ export default function Navbar({setShowContact}) {
                 return (
                   <motion.div className="contact-btn"
                   initial={{y: -200}}
-                  animate={{y: 0, transition: {duration: .5, delay: 0.1 * i + 1, ease: [.2,0,0,.99]}}}
+                  animate={{y: 0, transition: {duration: .5, delay: 0.1 * i + 2, ease: [.2,0,0,.99]}}}
                   exit={{y: -200, transition: {duration: .5, delay: 0.1 * i, ease: [.2,0,0,.99]}}}
                   whileHover="hover">
                     <Link to={"/" + item}>{item}</Link>
@@ -43,7 +43,7 @@ export default function Navbar({setShowContact}) {
 
             <motion.div className="contact-btn"
             initial={{y: -200}}
-            animate={{y: 0, transition: {duration: .5, delay: menuItems.length * 0.1 + 1, ease: [.2,0,0,.99]}}}
+            animate={{y: 0, transition: {duration: .5, delay: menuItems.length * 0.1 + 2, ease: [.2,0,0,.99]}}}
             exit={{y: -200, transition: {duration: .5, delay: 0.1 * menuItems.length, ease: [.2,0,0,.99]}}}
             whileHover="hover"
             onClick={() => setShowContact(true)}

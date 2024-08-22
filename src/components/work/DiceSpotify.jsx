@@ -1,11 +1,18 @@
 import './DiceExtras.css'
-import ImageReveal from '../ImageReveal'
 import TextReveal from '../TextReveal'
-import SpotifyImg1 from '../../assets/Screenshot 2024-08-05 at 11.29.26 AM.png'
+import SpotifyImg1 from '../../assets/SpotifyImgs/Follow+Artists+1.png'
+import SpotifyImg2 from '../../assets/SpotifyImgs/Library+Scan+Prompt.png'
+import SpotifyImg3 from '../../assets/SpotifyImgs/Scan+Results+(None).png'
+import SpotifyImg4 from '../../assets/SpotifyImgs/Scan+Results.png'
+import SpotifyImg5 from '../../assets/SpotifyImgs/User+Not+Scanned.png'
+import SpotifyImg6 from '../../assets/SpotifyImgs/User+Scanned.png'
 
 import { motion } from 'framer-motion'
+import ImageSlider from '../ImageSlider'
 
 export default function DiceSpotify() {
+  const images = [ SpotifyImg1, SpotifyImg2, SpotifyImg3, SpotifyImg4, SpotifyImg5, SpotifyImg6 ]
+
   return (
     <div className="work-wrapper">
       <motion.div className="work-body"
@@ -19,7 +26,7 @@ export default function DiceSpotify() {
             <p>If they skip this step in onboarding, we want to highlight again that they should do this, as it really improves their experience on DICE</p>
           </TextReveal>
 
-          <ImageReveal image={SpotifyImg1} />
+          <ImageSlider images={images} />
 
           <TextReveal>
             <p>Encouraging fans to connect their Spotify or Apple music and following artists increased retention</p>

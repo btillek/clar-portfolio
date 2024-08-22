@@ -8,7 +8,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   z-index: 100;
 }
 
@@ -17,11 +17,22 @@
   flex-direction: column;
   cursor: pointer;
   font-family: "Work Sans", sans-serif;
+  /* border: 2px solid black;
+  border-radius: 50px;
+  padding: 0 12px; */
 }
 
+/* .contact-btn:hover {
+  color: #eae9ec;
+  background-color: rgb(29, 28, 29);
+} */
+
 .menu {
-  font-size: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
   display: flex;
+  /* flex-direction: column; */
+  align-items: flex-end;
   gap: 24px;
   margin: 0;
 }

@@ -1,13 +1,13 @@
 import '../components/Work.css'
 import { AnimatePresence, motion } from "framer-motion"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { workProjects } from '../work-projects-data'
 import DiceExtras from '../components/work/DiceExtras'
-import DiceExtras2 from '../components/work/DiceExtras2'
 import DiceGroups from '../components/work/DiceGroups'
 import DiceBeyond from '../components/work/DiceBeyond'
 import DiceSpotify from '../components/work/DiceSpotify'
-import { Undo2 } from 'lucide-react'
+import DiceContent from '../components/work/DiceContent'
+import DiceFiltering from '../components/work/DiceFiltering'
 
 export default function Work() {
 
@@ -42,6 +42,8 @@ export default function Work() {
             { showProject === "Groups" && <DiceGroups /> }
             { showProject === "Beyond genre" && <DiceBeyond /> }
             { showProject === "Spotify & Apple Music" && <DiceSpotify /> }
+            { showProject === "Content design system" && <DiceContent /> }
+            { showProject === "Filtering" && <DiceFiltering /> }
           </AnimatePresence>
         </div>
 

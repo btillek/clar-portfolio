@@ -1,7 +1,15 @@
 .work-text {
-  box-sizing: border-box;
+  /* box-sizing: border-box;
   padding: 48px 24px;
   max-width: 60vw;
-  text-align: justify;
+  text-align: justify; */
   /* font-size: 2rem; */
+}
+
+.reveal-crop {
+  font-size: 2rem;
+  /* font-weight: 500; */
+  line-height: 2rem;
+  display: flex;
+  overflow: hidden;
 }

@@ -4,7 +4,9 @@
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
-  /* display: flex; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   padding: 24px;
   /* font-family: "Noto Serif Display", serif; */
 }
@@ -20,7 +22,6 @@
 .sub-header-crop {
   overflow: hidden;
   display: flex;
-
   position: fixed;
   bottom: 24px;
   right: 24px;

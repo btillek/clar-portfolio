@@ -1,5 +1,7 @@
 .about-sticky-container {
   height: 250vh;
+  width: 60vw;
+  overflow: hidden;
 }
 
 .about-container {

@@ -1,6 +1,5 @@
 import Header from "../components/Header"
 import About from "../components/About"
-import ContactOverlay from "../components/ContactOverlay"
 import Marquee from "react-fast-marquee"
 import Footer from "../components/Footer"
 import { motion } from "framer-motion"
@@ -17,11 +16,6 @@ export default function Home() {
             style={{marginRight: 480, textDecoration: "none", color: "black"}}
             >Let's work together</a>
           </motion.Marquee>
-
-          {/* <ContactOverlay showContact={showContact} setShowContact={setShowContact}/> */}
-          {/* <Personal1 /> */}
-          {/* <MenuOverlay showMenu={showMenu} setShowMenu={setShowMenu} setShowResume={setShowResume}/> */}
-          {/* <Resume /> */}
           <Footer />
         </motion.div>
     )

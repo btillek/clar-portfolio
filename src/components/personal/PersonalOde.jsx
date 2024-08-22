@@ -2,6 +2,7 @@ import './PersonalOde.css'
 import ImgBeer from '../../assets/Screenshot 2024-07-22 at 4.20.16 PM.png'
 import ImgButter from '../../assets/Screenshot 2024-07-30 at 3.07.14 PM.png'
 import { motion } from 'framer-motion'
+import { useParallax } from 'react-scroll-parallax'
 
 const projectContent = [
   "Guggering potatoes. You heard that right? It’s not googling.",
