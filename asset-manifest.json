@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/clar-portfolio/static/css/main.d7616a6d.css",
-    "main.js": "/clar-portfolio/static/js/main.cb2310ea.js",
+    "main.css": "/clar-portfolio/static/css/main.0d67423a.css",
+    "main.js": "/clar-portfolio/static/js/main.3530389a.js",
     "static/media/This+Week.png": "/clar-portfolio/static/media/This+Week.865a17c8772cdd1027f1.png",
     "static/media/Tonight.png": "/clar-portfolio/static/media/Tonight.5d51728fe1282816f64c.png",
     "static/media/Top+Shows.png": "/clar-portfolio/static/media/Top+Shows.f6fc7c0229d3faef8a33.png",
@@ -65,11 +65,11 @@
     "static/media/Frame+4.png": "/clar-portfolio/static/media/Frame+4.95c75a1d615e922f4906.png",
     "static/media/Frame+1.png": "/clar-portfolio/static/media/Frame+1.1dd37fac6d0d10b9e094.png",
     "index.html": "/clar-portfolio/index.html",
-    "main.d7616a6d.css.map": "/clar-portfolio/static/css/main.d7616a6d.css.map",
-    "main.cb2310ea.js.map": "/clar-portfolio/static/js/main.cb2310ea.js.map"
+    "main.0d67423a.css.map": "/clar-portfolio/static/css/main.0d67423a.css.map",
+    "main.3530389a.js.map": "/clar-portfolio/static/js/main.3530389a.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7616a6d.css",
-    "static/js/main.cb2310ea.js"
+    "static/css/main.0d67423a.css",
+    "static/js/main.3530389a.js"
   ]
 }
