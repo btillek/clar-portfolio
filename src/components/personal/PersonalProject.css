@@ -13,8 +13,8 @@
 .personal-project-title {
   font-size: 2rem;
   font-weight: 600;
-  padding: 24px;
-  margin: 48px 0 0 50vw;
+  /* padding: 24px; */
+  /* margin: 48px 0 0 50vw; */
   /* margin-left: 50vw; */
   text-transform: uppercase;
   /* border-top: .5px solid black; */
@@ -41,13 +41,13 @@
 .personal-project-img {
   object-fit: contain;
   height: 200px;
-  transition: .5s ease;
+  /* transition: .5s ease; */
 }
 
-.personal-project-img:hover {
+/* .personal-project-img:hover {
   height: 500px;
   transition: .5s ease;
-}
+} */
 
 .personal-project-text {
   box-sizing: border-box;

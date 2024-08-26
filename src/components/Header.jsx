@@ -1,15 +1,18 @@
 import './Header.css'
 import Portrait from '../assets/Portrait.png'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform, useMotionTemplate, cubicBezier } from 'framer-motion'
 
 export default function Header() {
 
   const { scrollY } = useScroll()
 
-  const scale = useTransform(scrollY, [0, window.innerHeight / 2], [1, 1.8])
-  const headerScale = useTransform(scrollY, [0, window.innerWidth / 4], [1, 0.2])
-  const underlineScale = useTransform(scrollY, [window.innerWidth / 8, window.innerWidth / 4], ["0%", "100%"])
+  const scale = useTransform(scrollY, [0, window.innerHeight / 2], [1, 2], {ease: cubicBezier(.27,0,.35,1)})
+  const clipScale1 = useTransform(scrollY, [0, window.innerHeight / 6], [15, 0])
+  const clipScale2 = useTransform(scrollY, [0, window.innerHeight / 6], [85, 100])
+  const clipPath = useMotionTemplate`polygon(${clipScale1}% ${clipScale1}%, ${clipScale2}% ${clipScale1}%, ${clipScale2}% ${clipScale2}%, ${clipScale1}% ${clipScale2}%)`
+  const headerScale = useTransform(scrollY, [window.innerHeight / 2, window.innerHeight * .9], [1, 0.2], {ease: cubicBezier(.7,.35,.35,.7)})
+  const underlineScale = useTransform(scrollY, [window.innerHeight / 2, window.innerHeight * .8], ["0%", "100%"])
 
   return (
     <motion.div className="header-container">
@@ -75,10 +78,10 @@ export default function Header() {
         </motion.div>
       </div> */}
 
-      <motion.div style={{height: "300px", position: "fixed", bottom: "24px", left: "24px", scale, originX: 0, originY: 1}}>
+      <motion.div style={{height: "250px", position: "fixed", bottom: "0px", right: "0px", scale, originX: 1.15, originY: 1.15, clipPath}}>
         <motion.img src={Portrait} alt="" style={{height: "100%", objectFit: "contain"}}
          initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
-         animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1.5, delay: 1.5, ease: [0.5, 0, 0, 1]}}}
+         animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 2, delay: 1.5, ease: [0.5, 0, 0, 1]}}}
          exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1.5, ease: [0.5, 0, 0, 1]}}}
          />
       </motion.div>

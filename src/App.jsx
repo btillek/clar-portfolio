@@ -12,36 +12,39 @@ import Work2 from './pages/Work2'
 import Personal from './pages/Personal';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact'
+import ReactLenis from 'lenis/react';
 
 function App() {
 
   const [ showContact, setShowContact ] = useState(false)
 
-  const lenis = new Lenis()
+  // const lenis = new Lenis()
 
-  function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-  }
+  // function raf(time) {
+  //   lenis.raf(time)
+  //   requestAnimationFrame(raf)
+  // }
 
-  requestAnimationFrame(raf)
+  // requestAnimationFrame(raf)
 
   const location = useLocation();
 
   return (
     <>
-      <Navbar setShowContact={setShowContact}/>
-      <ContactOverlay showContact={showContact} setShowContact={setShowContact}/>
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/work2" element={<Work2 />} />
-          <Route path="/personal" element={<Personal />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </AnimatePresence>
+      <ReactLenis root options={{lerp: 0.1}}>
+        <Navbar setShowContact={setShowContact}/>
+        <ContactOverlay showContact={showContact} setShowContact={setShowContact}/>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/work2" element={<Work2 />} />
+            <Route path="/personal" element={<Personal />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </AnimatePresence>
+      </ReactLenis>
     </>
   )
 }

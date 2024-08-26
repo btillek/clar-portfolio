@@ -1,6 +1,7 @@
 import './PersonalProject.css'
 import ImgAshtray from '../../assets/Screenshot 2024-07-25 at 11.57.39 AM.png'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 
 export default function PersonalChocolate() {
   const projectContent = [
@@ -13,38 +14,44 @@ export default function PersonalChocolate() {
     "Just annual dips and daily peat spritzes.",
   ]
 
+  const imgRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: imgRef,
+    offset: ["start end", "end start"]
+  })
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, 300])
+
   return (
     <div className="personal-project-body">
 
-      <motion.h2 className="personal-project-title">
-        {
-          "100% dark chocolate or poison".split(" ").map((word, i) => {
-            return (
-              <motion.div
-              style={{display: "inline-block"}}
-              initial={{y: 150}}
-              animate={{y: 0, transition: {duration: 1, delay: 0.1 * i + .5, ease: [0.5, 0, 0, 1]}}}
-              exit={{y: -150, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-              >
-                {word}&nbsp;
-              </motion.div>
-            )
-          })
-        }
-      </motion.h2>
-
       <div className="personal-project-middle">
 
-        <div className="personal-project-img-container">
+        <div className="personal-project-img-container" ref={imgRef}>
           <motion.img src={ImgAshtray} alt="" className="personal-project-img"
-          style={{height: "400px"}}
+          style={{height: "300px", y: y1}}
           initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
           animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
           exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
           />
         </div>
 
-        <motion.div className="personal-project-text">
+        <motion.div className="personal-project-text" style={{position: "relative", left: "-20vw"}}>
+          <motion.h2 className="personal-project-title">
+            {
+              "100% dark chocolate or poison".split(" ").map((word, i) => {
+                return (
+                  <motion.div
+                  style={{display: "inline-block"}}
+                  initial={{y: 150}}
+                  animate={{y: 0, transition: {duration: 1, delay: 0.1 * i + .5, ease: [0.5, 0, 0, 1]}}}
+                  exit={{y: -150, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+                  >
+                    {word}&nbsp;
+                  </motion.div>
+                )
+              })
+            }
+          </motion.h2>
 
           <div className="personal-project-paragraph">
             {

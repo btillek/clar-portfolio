@@ -9,9 +9,9 @@ export default function Personal() {
   return (
     <>
       <ParallaxProvider>
-        <div style={{width: "100vw"}}>
+        {/* <div style={{width: "100vw"}}>
           <div style={{fontSize: "3rem", fontFamily: "Work Sans", fontWeight: "500", fontStyle: "italic", position: "fixed", top: "24px", left: "24px", zIndex: "30"}}>Personal writing</div>
-        </div>
+        </div> */}
         <div style={{marginTop: "96px"}}>
             <div><PersonalOde/></div>
             <div><PersonalBog /></div>

@@ -2,7 +2,8 @@ import './PersonalProject.css'
 import ImgBottle from '../../assets/Screenshot 2024-07-25 at 11.35.15 AM.png'
 import ImgCross from '../../assets/Screenshot 2024-07-30 at 10.50.14 AM.png'
 import ImgChurch from '../../assets/Screenshot 2024-07-30 at 11.39.42 AM.png'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 
 const projectContent = [
   "I want to age like a bog body.",
@@ -15,34 +16,39 @@ const projectContent = [
 ]
 
 export default function PersonalBog() {
+  const imgRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: imgRef,
+    offset: ["start end", "end start"]
+  })
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, 100])
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, 150])
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, 70])
+
   return (
     <div className="personal-project-body">
 
-      <motion.h2 className="personal-project-title" style={{marginLeft: 0}}>
-        {
-          "Bog".split("").map((letter, i) => {
-            return (
-              <motion.div
-              style={{display: "inline-block"}}
-              initial={{y: 150}}
-              animate={{y: 0, transition: {duration: 1, delay: 0.1 * i + .5, ease: [0.5, 0, 0, 1]}}}
-              exit={{y: -150, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-              >
-                {letter}
-              </motion.div>
-            )
-          })
-        }
-        &nbsp;
-
-      </motion.h2>
-
       <div className="personal-project-middle">
 
+        <motion.div className="personal-project-text" style={{marginLeft: "196px"}}>
+          <motion.h2 className="personal-project-title" style={{marginLeft: 0}}>
+          {
+            "Bog".split("").map((letter, i) => {
+              return (
+                <motion.div
+                style={{display: "inline-block"}}
+                initial={{y: 150}}
+                animate={{y: 0, transition: {duration: 1, delay: 0.1 * i + .5, ease: [0.5, 0, 0, 1]}}}
+                exit={{y: -150, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+                >
+                  {letter}
+                </motion.div>
+              )
+            })
+          }
+          &nbsp;
 
-
-        <motion.div className="personal-project-text">
-
+        </motion.h2>
           <div className="personal-project-paragraph">
             {
               projectContent.map((line, i) => {
@@ -66,15 +72,15 @@ export default function PersonalBog() {
           </a>
         </motion.div>
 
-        <div className="personal-project-img-container">
+        <div className="personal-project-img-container" ref={imgRef}>
           <motion.img src={ImgBottle} alt="" className="personal-project-img"
-          style={{marginTop: "-48px"}}
+          style={{marginTop: "-48px", y: y1}}
           initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
           animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
           exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
           />
-          <img src={ImgCross} alt="" className="personal-project-img" style={{height: "400px"}}/>
-          <img src={ImgChurch} alt="" className="personal-project-img" />
+          <motion.img src={ImgCross} alt="" className="personal-project-img" style={{height: "400px", y: y2}}/>
+          <motion.img src={ImgChurch} alt="" className="personal-project-img" style={{y: y3}}/>
         </div>
 
       </div>

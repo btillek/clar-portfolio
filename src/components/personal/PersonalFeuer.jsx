@@ -1,33 +1,40 @@
 import './PersonalOde.css'
 import ImgSwan from '../../assets/Screenshot 2024-07-25 at 11.59.47 AM.png'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 
 export default function PersonalFeuer() {
+
+  const imgRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: imgRef,
+    offset: ["start end", "end start"]
+  })
+  const y1 = useTransform(scrollYProgress, [0, 1], [-200, 100])
+
   return (
     <div className="personal-project-body">
 
-      <motion.h2 className="personal-project-title" style={{marginLeft: 0}}>
-        {
-          "Hast du Feuer?".split(" ").map((word, i) => {
-            return (
-              <motion.div
-              style={{display: "inline-block"}}
-              initial={{y: 150}}
-              animate={{y: 0, transition: {duration: 1, delay: 0.1 * i + .5, ease: [0.5, 0, 0, 1]}}}
-              exit={{y: -150, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
-              >
-                {word}&nbsp;
-              </motion.div>
-            )
-          })
-        }
-        &nbsp;
-
-      </motion.h2>
-
       <div className="personal-project-middle">
 
-        <motion.div className="personal-project-text">
+        <motion.div className="personal-project-text" style={{marginLeft: "96px"}}>
+
+          <motion.h2 className="personal-project-title" style={{marginLeft: 0}}>
+            {
+              "Hast du Feuer?".split(" ").map((word, i) => {
+                return (
+                  <motion.div
+                  style={{display: "inline-block"}}
+                  initial={{y: 150}}
+                  animate={{y: 0, transition: {duration: 1, delay: 0.1 * i + .5, ease: [0.5, 0, 0, 1]}}}
+                  exit={{y: -150, transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
+                  >
+                    {word}&nbsp;
+                  </motion.div>
+                )
+              })
+            }
+          </motion.h2>
 
           <div className="personal-project-paragraph">
 
@@ -48,9 +55,9 @@ export default function PersonalFeuer() {
           </a>
         </motion.div>
 
-        <div className="personal-project-img-container">
+        <div className="personal-project-img-container" ref={imgRef}>
           <motion.img src={ImgSwan} alt="" className="personal-project-img"
-          style={{marginTop: "-48px"}}
+          style={{marginLeft: "196px", height: "400px", y: y1}}
           initial={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}}
           animate={{clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
           exit={{clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", transition: {duration: 1, ease: [0.5, 0, 0, 1]}}}
